@@ -1,0 +1,159 @@
+/* Footer.css */
+
+.footer {
+  position: relative;
+  background-color: #171717;;
+  color: white;
+  padding: 30px 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  /* bottom: 0px; */
+  overflow: hidden; /* Added to ensure the SVG doesn't overflow the footer */
+}
+
+.footer-svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  pointer-events: none; /* Prevents interaction with the SVG */
+}
+
+.footer-content {
+  position: relative; /* Added to create a stacking context */
+  z-index: 20; /* Ensures the content is above the SVG */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  /* margin: 0 auto; */
+  padding: 20px 20px;
+
+}
+
+.footer-logo img {
+  max-width: 220px;
+  width: 200px;
+  height: 130px;
+  flex-direction: flex-start;
+  position: relative;
+  /* margin-right: 150px; */
+  border-radius: 19.422px;
+  margin: 0 auto;
+  z-index: 20; /* Ensures the logo is above the SVG */
+}
+
+.footer-contact button {
+  background-color: #000000;
+  color: white;
+  border: none;
+  width: 260px;
+  height:60px;
+  padding: 5px 26px;
+  justify-content: center;
+  align-items: center;
+  margin-top: -20px;
+  margin-left: -70px;
+  gap: 10px;
+  border-radius: 5px;
+  margin: 0 auto;
+  cursor: pointer;
+  z-index: 20; /* Ensures the button is above the SVG */
+}
+
+.footer-contact button:hover {
+  background-color: #252424;
+}
+.footer-menu{
+  width: 100%;
+}
+
+.footer-links {
+  position: relative; /* Added to create a stacking context */
+  z-index: 20; /* Ensures the links are above the SVG */
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 20px auto 0;
+  gap:20px;
+  padding: 0 20px;
+}
+
+.footer-links-column {
+  position: relative;
+  flex: 1;
+  /* margin-right: 20px; */
+  left:200px;
+
+}
+
+.footer-links h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 30px;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+.footer-links-social{
+  padding: 6px;
+
+}
+
+.footer-links ul li:hover {
+  color: #ff5733;
+}
+
+.footer-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  z-index: 20;
+}
+
+.footer-bottom-menu {
+  display: flex;
+  gap: 23px;
+  z-index: 20;
+}
+
+.curve{
+  position: absolute;
+  height: 225px;
+  width: 100%;
+  bottom: 0;
+}
+
+.curve::before{
+  content: '';
+  display: block;
+  position: absolute;
+  border-radius: 100% 50%;
+  width: 55%;
+  height: 100%;
+  background-color: #202731;
+  transform: translate(85%, 60%);
+}
+
+.curve::after{
+  content: '';
+  display: block;
+  position: absolute;
+  border-radius: 100% 50%;
+  width: 55%;
+  height: 100%;
+  background-color: #480c0c;
+  transform: translate(-4%, 40%);
+  z-index: -1;
+}
+/* Additional styles as needed */
