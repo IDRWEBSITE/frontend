@@ -6,6 +6,7 @@ import Plx from "react-plx";
 import background from "../../assets/Background.png";
 import mountain from "../../assets/Mountain.png";
 import drone2 from "../../assets/drone2.png";
+import drone1 from "../../assets/drone-1.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
 const Home = () => {
@@ -14,173 +15,222 @@ const Home = () => {
   });
 
   return (
-    <>
-      <div className="layer1">
-        <div style={{ position: "relative" }}>
-          <Plx
-            className="MyAwesomeParallax"
-            parallaxData={[
+    <div>
+      <Plx
+        parallaxData={[
+          {
+            start: 0,
+            end: 700,
+            easing: "ease-in",
+            properties: [
               {
-                start: 0,
-                duration: 300,
-                properties: [
-                  {
-                    startValue: 1.4,
-                    endValue: 1,
-                    property: "scale",
-                  },
-                  {
-                    startValue: 0,
-                    endValue: 100,
-                    property: "translateY",
-                  },
-                ],
+                startValue: 1,
+                endValue: 1.6,
+                property: "scale",
               },
-            ]}
-          >
-            <img
-              src={background}
-              alt="background"
-              style={{ height: "100vh", width: "100vw" }}
-            />
-          </Plx>
-        </div>
+            ],
+          },
+        ]}
+        style={{
+          position: "fixed",
+          left: 0,
+          top: 0,
+          width: "100%",
+        }}
+      >
+        <img style={{ width: "100%" }} src={background} alt="foreground" />
+      </Plx>
 
-        <div style={{ position: "absolute", top: "20px" }}>
-          <Plx
-            className="MyAwesomeParallax"
-            parallaxData={[
+      <Plx
+        parallaxData={[
+          {
+            start: 0,
+            end: 400,
+
+            properties: [
               {
-                start: 0,
-
-                duration: 500,
-                properties: [
-                  {
-                    startValue: 1,
-                    endValue: 2.1,
-                    property: "scale",
-                  },
-                  {
-                    startValue: 100,
-                    endValue: -60,
-                    property: "translateY",
-                  },
-                ],
+                startValue: 0,
+                endValue: 400,
+                property: "translateY",
               },
-              {
-                start: 700,
+            ],
+          },
+        ]}
+        style={{
+          position: "fixed",
+          left: 300,
+          top: 100,
+          width: "100%",
+          fontSize: "90px",
+          width: "70%",
+          color: "white",
+          textAlign: "left",
+          fontWeight: "700",
+          textShadow: "2px 3px 20px #f9f9f9;",
+        }}
+      >
+        <h1>
+          FLY HIGH <br /> <span className="inner-title">THROUGH</span> THE SKY
+        </h1>
+      </Plx>
+      <Plx
+        parallaxData={[
+          {
+            start: 0,
+            end: 400,
 
-                duration: 500,
-                properties: [
-                  {
-                    startValue: 0,
-                    endValue: 10,
-                    property: "blur",
-                  },
-                ],
+            properties: [
+              {
+                startValue: 1,
+                endValue: 0,
+                property: "opacity",
               },
-            ]}
-          >
-            <img src={mountain} alt="background" />
-          </Plx>
-          <Plx
-            className="MyAwesomeParallax"
-            parallaxData={[
+            ],
+          },
+        ]}
+        style={{
+          position: "fixed",
+          top: 200,
+          left: 200,
+          width: "900px",
+        }}
+      >
+        <img src={drone1} />
+      </Plx>
+      <Plx
+        parallaxData={[
+          {
+            start: 0,
+            end: 800,
+            properties: [
               {
-                start: 0,
-
-                duration: 800,
-                properties: [
-                  {
-                    startValue: -800,
-                    endValue: 500,
-                    property: "translateX",
-                  },
-                ],
-              },
-              {
-                start: 500,
-
-                duration: 300,
-
-                properties: [
-                  {
-                    startValue: 0,
-                    endValue: -800,
-                    property: "translateX",
-                  },
-                ],
-              },
-            ]}
-          >
-            <div style={{ position: "absolute", bottom: "10px" }}>
-              <h1
-                style={{
-                  color: "white",
-                  fontSize: "8rem",
-                  margin: "0 20px",
-                }}
-              >
-                DOOT MK-1
-              </h1>
-            </div>
-          </Plx>
-          <Plx
-            className="MyAwesomeParallax"
-            parallaxData={[
-              {
-                start: 0,
-
-                duration: 500,
-                properties: [
-                  {
-                    startValue: 1,
-                    endValue: 1.05,
-                    property: "scale",
-                  },
-                  {
-                    startValue: 100,
-                    endValue: -200,
-                    property: "translateY",
-                  },
-                ],
+                startValue: 1,
+                endValue: 2,
+                property: "scale",
               },
               {
-                start: 600,
-
-                duration: 900,
-                easing: [0.25, 0.1, 0.53, 3],
-                properties: [
-                  {
-                    startValue: 1,
-                    endValue: -10,
-                    property: "opacity",
-                  },
-                ],
+                startValue: 300,
+                endValue: -250,
+                property: "translateY",
               },
-            ]}
-          >
-            <div style={{ position: "relative" }}>
-              <img
-                src={drone2}
-                alt=""
-                srcset=""
-                style={{ position: "fixed" }}
-              />
-            </div>
-          </Plx>
-        </div>
+            ],
+          },
+        ]}
+        style={{
+          position: "fixed",
+          left: 0,
+          top: 0,
+          width: "100%",
+        }}
+      >
+        <img style={{ width: "100%" }} src={mountain} alt="background" />
+        {/* title */}
+      </Plx>
+      <Plx
+        parallaxData={[
+          {
+            start: 0,
+            end: 400,
 
-        <div style={{}}>
-          <img
-            src={mountain}
-            alt="background"
-            style={{}}
-            className={"fade-right"}
-          />
-        </div>
+            properties: [
+              {
+                startValue: -1000,
+                endValue: -400,
+                property: "translateX",
+              },
+            ],
+          },
+        ]}
+        style={{
+          position: "fixed",
+          left: 0,
+          top: 300,
+          width: "100%",
+        }}
+      >
+        <h1 style={{ color: "white", fontSize: "90px", fontWeight: "700" }}>
+          DOOT MK-1
+        </h1>
+      </Plx>
+      <Plx
+        parallaxData={[
+          {
+            start: 0,
+            end: 400,
+
+            properties: [
+              {
+                startValue: 0,
+                endValue: 1,
+                property: "opacity",
+              },
+            ],
+          },
+        ]}
+        style={{
+          position: "fixed",
+          left: 300,
+          top: 600,
+          width: "100%",
+          fontSize: "50px",
+          width: "70%",
+          color: "white",
+          textAlign: "right",
+        }}
+      >
+        <h1>
+          Innovating the Future of Defence: Unleashing the Power of Drones"
+        </h1>
+      </Plx>
+      <Plx
+        parallaxData={[
+          {
+            start: 0,
+            end: 400,
+
+            properties: [
+              {
+                startValue: 400,
+                endValue: 0,
+                property: "translateY",
+              },
+            ],
+          },
+        ]}
+        style={{
+          position: "fixed",
+          left: 0,
+          top: 300,
+          width: "100%",
+        }}
+      >
+        <img
+          style={{
+            width: "40vw",
+          }}
+          src={drone2}
+          alt="Goonies"
+        />
+      </Plx>
+      <div
+        style={{
+          position: "fixed",
+          lefft: 0,
+          top: 0,
+          zIndex: 200,
+          paddingTop: "56%",
+          height: "400vh",
+          width: "100%",
+        }}
+      >
+        <div
+          style={{
+            background: "#000",
+            height: "100%",
+          }}
+        ></div>
       </div>
-    </>
+    </div>
   );
 };
 
