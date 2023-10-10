@@ -1,18 +1,88 @@
-html,
-body {
-  overscroll-behavior: none;
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@100;200;300;400;500;600;700;800&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-body-home {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  text-align: center;
-  background: #000;
-  height: 200vh;
+.wrapper{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url('../../assets/Background.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* z-index: -1; */
+
 }
-.inner-title{
-    color: transparent;
+.heading{
+    width: 930px;
+    height: 248px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin: 7.3rem;
+    /* bottom:0.1px; */
+    left: 20%;
+
+}
+.top-heading h1,
+.bottom-heading h1{
+    color: var(--grey, #EBEBEB);
+    text-shadow: 0px 4px 34px rgba(130, 165, 107, 0.59);
+    font-family: 'Urbanist';
+    font-size: 103.359px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.hollow-heading{
+    text-align: center;
     text-shadow: none;
+    font-size: 103.359px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color: transparent;
+    font-family: 'Urbanist';
     -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: rgb(255, 255, 255);
+}
+
+.drone-home{
+    position: absolute;
+    background-image: url('../../assets/drone-home.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 65%;
+    height: 65%;
+    align-items: center;
+    justify-content: center;
+    margin: 45px 208px;
+    z-index: 100;
+
+}
+.drone{
+    background-image: url('../../assets/drone-home.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.mountain-layer{
+    position: absolute;
+    background-image: url('../../assets/Mountain.png');
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    /* on screen 1 background-size : cover & on screen-2 background-size will be not cover & bg-position will change from center to none/default */
+    background-size: cover;
+    overflow: hidden;
+    width: 100%; 
+    height: 100%;
+    z-index: 101;
 }

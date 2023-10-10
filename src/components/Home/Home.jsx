@@ -1,6 +1,6 @@
 import React from "react";
 import "./module.home.css";
-import Navbar from "../Navbar/Navbar";
+import NavBar from "../Navbar-2/NavBar";
 import { useEffect } from "react";
 import Plx from "react-plx";
 import background from "../../assets/Background.png";
@@ -12,7 +12,7 @@ const Home = () => {
 
   return (
     <>
-    <Navbar />
+    <NavBar />
     <div>
 
       <Plx
