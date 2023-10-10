@@ -115,6 +115,18 @@ const Home = () => {
               },
             ],
           },
+          {
+            start: 800,
+
+            duration: 500,
+            properties: [
+              {
+                startValue: 0,
+                endValue: 10,
+                property: "blur",
+              },
+            ],
+          },
         ]}
         style={{
           position: "fixed",
@@ -136,6 +148,18 @@ const Home = () => {
               {
                 startValue: -1000,
                 endValue: -400,
+                property: "translateX",
+              },
+            ],
+          },
+          {
+            start: 600,
+            end: 900,
+
+            properties: [
+              {
+                startValue: -400,
+                endValue: -2000,
                 property: "translateX",
               },
             ],
@@ -162,6 +186,18 @@ const Home = () => {
               {
                 startValue: 0,
                 endValue: 1,
+                property: "opacity",
+              },
+            ],
+          },
+          {
+            start: 500,
+            end: 900,
+
+            properties: [
+              {
+                startValue: 1,
+                endValue: 0,
                 property: "opacity",
               },
             ],
@@ -196,6 +232,18 @@ const Home = () => {
               },
             ],
           },
+          {
+            start: 500,
+            end: 800,
+
+            properties: [
+              {
+                startValue: 1,
+                endValue: 0,
+                property: "opacity",
+              },
+            ],
+          },
         ]}
         style={{
           position: "fixed",
@@ -212,24 +260,149 @@ const Home = () => {
           alt="Goonies"
         />
       </Plx>
-      <div
+      <Plx
+        parallaxData={[
+          {
+            start: 0,
+            end: 700,
+            easing: "ease-in",
+            properties: [
+              {
+                startValue: 1,
+                endValue: 0.4,
+                property: "opacity",
+              },
+            ],
+          },
+        ]}
         style={{
-          position: "fixed",
-          lefft: 0,
-          top: 0,
-          zIndex: 200,
-          paddingTop: "56%",
-          height: "400vh",
+          position: "absolute",
+          left: 0,
+          top: 1600,
+          width: "100%",
+          zIndex: 1000,
+          backgroundColor: "black",
+          height: "100vh",
+        }}
+      >
+        <Plx
+          parallaxData={[
+            {
+              start: 0,
+              duration: 300,
+
+              properties: [
+                {
+                  startValue: -200,
+                  endValue: 0,
+                  property: "translateY",
+                },
+              ],
+            },
+          ]}
+          style={{
+            position: "absolute",
+            left: 200,
+            // top: 400,
+            width: "100%",
+            fontSize: "70px",
+            width: "70%",
+            color: "white",
+            textAlign: "left",
+            fontWeight: "700",
+            textShadow: "2px 3px 20px #f9f9f9;",
+          }}
+        >
+          <h1>
+            <span className="inner-title">Empower your security with our </span>
+            Doot Mk-1
+          </h1>
+        </Plx>
+      </Plx>
+      <Plx
+        parallaxData={[
+          {
+            start: 0,
+            end: 400,
+
+            properties: [
+              {
+                startValue: 0,
+                endValue: 0,
+                property: "translateY",
+              },
+            ],
+          },
+          {
+            start: 500,
+            end: 800,
+
+            properties: [
+              {
+                startValue: 1,
+                endValue: 1,
+                property: "opacity",
+              },
+            ],
+          },
+        ]}
+        style={{
+          position: "absolute",
+          left: 400,
+          top: 1600,
           width: "100%",
         }}
       >
-        <div
-          style={{
-            background: "#000",
-            height: "100%",
-          }}
-        ></div>
-      </div>
+        <div>
+          <img
+            style={{
+              width: "40vw",
+
+              marginTop: "90px",
+            }}
+            src="https://media.discordapp.net/attachments/1123630739213258834/1161280192975732786/image.png?ex=6537b975&is=65254475&hm=3be69a8d0791a28fd5236971d5381b1ef717efead5d355e6a5c624e87da4a75c&=&width=1378&height=902"
+            alt="Goonies"
+          />
+        </div>
+      </Plx>
+      <Plx
+        parallaxData={[
+          {
+            start: 500,
+            end: 800,
+
+            properties: [
+              {
+                startValue: 1,
+                endValue: 1,
+                property: "opacity",
+              },
+            ],
+          },
+        ]}
+        style={{
+          position: "absolute",
+          left: 200,
+          top: 2100,
+          width: "100%",
+          color: "white",
+        }}
+      >
+        <div>
+          <h1
+            style={{
+              color: "white",
+              fontSize: "30px",
+              width: "70%",
+              textAlign: "center",
+            }}
+          >
+            The Doot MK-1 represents the pinnacle of Indian ingenuity and drone
+            engineering. This state-of-the-art drone is designed to elevate your
+            aerial experiences to new heights.
+          </h1>
+        </div>
+      </Plx>
     </div>
   );
 };

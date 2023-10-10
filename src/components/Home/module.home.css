@@ -11,6 +11,7 @@ body {
 }
 .inner-title{
     color: transparent;
+    width: 100%;
     text-shadow: none;
     -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
     -webkit-text-stroke-width: 1px;
