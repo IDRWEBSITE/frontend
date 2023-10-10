@@ -171,7 +171,7 @@ const Home = () => {
           width: "100%",
         }}
       >
-        <h1 style={{ color: "white", fontSize: "90px", fontWeight: "700" }}>
+        <h1 style={{ color: "white", fontSize: "90px", textAlign: "center" ,fontWeight: "700" }}>
           DOOT MK-1
         </h1>
       </Plx>
