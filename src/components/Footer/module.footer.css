@@ -7,8 +7,9 @@
   padding: 30px 0;
   display: flex;
   flex-direction: column;
+  background-attachment: fixed;
   text-align: center;
-  /* bottom: 0px; */
+  bottom: 0px;
   overflow: hidden; /* Added to ensure the SVG doesn't overflow the footer */
 }
 
@@ -157,3 +158,51 @@
   z-index: -1;
 }
 /* Additional styles as needed */
+
+
+/* Small screens (up to 767px) */
+@media screen and (max-width: 767px) {
+  .footer-content {
+    padding: 20px;
+  }
+  .footer-menu{
+    display: none;
+  }
+  .footer-logo img{
+    width: 100%;
+  }
+  .footer-contact button {
+    margin-top: 10px;
+    width: auto;
+  }
+
+  .footer-links {
+    flex-direction: column;
+  }
+  .footer-bottom{
+    flex-wrap: wrap;
+  }
+}
+
+/* Medium screens (768px to 1023px) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .footer-logo img {
+    max-width: 180px;
+  }
+}
+
+/* Large screens (1024px and above) */
+@media screen and (min-width: 1024px) {
+  .footer-content {
+    flex-direction: row;
+  }
+
+  .footer-menu {
+    width: auto;
+    flex: 1;
+  }
+
+  .footer-links {
+    flex-direction: row;
+  }
+}

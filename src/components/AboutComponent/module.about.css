@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@100;200;300;400;500;600;700;800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* overflow: hidden; */
+}
+
+.wrapper-2{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    /* display: flex; */
+}
+
+.hero-section{
+    background-image: url('../../assets/Rectangle\ 3842.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    height: 400px;
+}
+.hero-section h1{
+    color: #FFF;
+    font-family: 'Urbanist';
+    font-size: 115.833px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    margin-top: 3rem;
+    text-align: center;
+    padding: 50px ;
+}
+
+/* .service-section{
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    height: 400px;
+}
+
+.left-section{
+    height: 100%;
+    width: 90%;
+    margin: 3rem 2rem;
+}
+.left-section p {
+    color: var(--write, #53AF80);
+    font-family: Sansation;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+} */
+
+/* Your existing CSS code */
+
+/* Mobile screens (up to 767px) */
+@media screen and (max-width: 767px) {
+    .hero-section {
+      /* Add mobile-specific styles here */
+      height: 300px; /* Example: Adjust the height for mobile screens */
+      background-size: cover; /* Example: Adjust background size for mobile screens */
+      font-size: 36px; /* Example: Adjust font size for mobile screens */
+    }
+  
+    .hero-section h1 {
+      /* Add mobile-specific styles for the heading here */
+      font-size: 36px; /* Example: Adjust font size for the heading on mobile screens */
+    }
+  }
+  
+  /* Tablet screens (768px to 1023px) */
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    .hero-section {
+      /* Add tablet-specific styles here */
+      height: 400px; /* Example: Adjust the height for tablet screens */
+      background-size: cover; /* Example: Adjust background size for tablet screens */
+      font-size: 48px; /* Example: Adjust font size for tablet screens */
+    }
+  
+    .hero-section h1 {
+      /* Add tablet-specific styles for the heading here */
+      font-size: 48px; /* Example: Adjust font size for the heading on tablet screens */
+    }
+  }
+  
+  /* Desktop screens (1024px and above) */
+ 

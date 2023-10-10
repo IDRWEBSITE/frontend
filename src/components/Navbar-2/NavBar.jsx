@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import logo from "../../assets/IDR Black Logo 2.png";
-import "./module.navbar.css"; // Import your CSS file for styling
+import "./module.navBar.css"; // Import your CSS file for styling
 
-const Navbar = () => {
+const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -11,7 +11,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={`navbar ${menuOpen ? "open" : ""}`}>
+    <nav className={`navBar ${menuOpen ? "open" : ""}`}>
       <div className="logo">
         <Link to="/" className="">
           <img src={logo} alt="" className="logo-img" />
@@ -35,4 +35,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default NavBar;

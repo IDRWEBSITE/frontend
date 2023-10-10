@@ -1,0 +1,111 @@
+/* Navbar.css */
+*{
+    /* background-color: #333; */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+.navBar{
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    align-items: center;
+    background: rgba(217, 217, 217, 0.25);
+    padding: 0px 20px;
+    z-index: 1000;
+    position:absolute;
+    width: 100%;
+  }
+  
+  .logo{
+    border-radius: 9px;
+  }
+  .logo-img{
+    border-radius: 9px;
+  }
+  
+  .menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    gap: 95px;
+  }
+  
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+  }
+  
+  .menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: rgb(230, 230, 230);
+    margin: 3px 0;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .links {
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    gap:95px;
+    font-family: Urbainist  ;
+    font-weight: 500;
+    line-height: normal;
+  }
+  
+  .links a {
+    text-decoration: none;
+    color: #040404;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+  }
+  
+  .links a:hover {
+    color: #ece6e6;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .menu-toggle {
+      display: flex;
+    }
+  
+    .menu-toggle.open .bar:nth-child(1) {
+      transform: translateY(6px) rotate(45deg);
+    }
+  
+    .menu-toggle.open .bar:nth-child(2) {
+      transform: scaleX(0);
+    }
+  
+    .menu-toggle.open .bar:nth-child(3) {
+      transform: translateY(-6px) rotate(-45deg);
+    }
+  
+    .links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      background-color: #333;
+      width: 100%;
+      text-align: center;
+      z-index: 1;
+      opacity: 0;
+      transition: opacity 0.3s ease, top 0.3s ease;
+    }
+  
+    .links.open {
+      display: flex;
+      opacity: 1;
+      top: 70px;
+    }
+  }
+  

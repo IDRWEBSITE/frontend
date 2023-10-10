@@ -1,0 +1,303 @@
+@import url("https://fonts.cdnfonts.com/css/sansation");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Sansation", sans-serif;
+}
+
+.wrapper-3 {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+.heading-3 h1 {
+  color: white;
+  /* font-family: 'Sansation'; */
+  font-size: 40px;
+  font-style: normal;
+  padding: 20px;
+  font-weight: 700;
+  line-height: normal;
+  text-align: center;
+}
+.heading-3 p {
+  color: #717171;
+  text-align: center;
+  /* font-family: 'Sansation'; */
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  /* font-family: 'Sansation'; */
+  margin-bottom: 20px;
+}
+
+.product {
+  color: white;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  margin: 25px;
+}
+.product-left {
+  background-image: url("../../assets/drone-product.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 500px;
+  height: 350px;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.product-right {
+  width: 500px;
+  height: 350px;
+  margin: 10px;
+  overflow: hidden;
+}
+
+.product-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.heading-product h2 {
+  color: #fff;
+  /* font-family: 'Sansation'; */
+  font-size: 34.18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.product-rating {
+  display: flex;
+  gap: 5px;
+}
+.modes {
+  display: flex;
+  gap: 10px;
+}
+.descBtn-1,
+.descBtn {
+  background-color: transparent;
+  width: 66px;
+  height: 30px;
+  color: white;
+  margin: 5px;
+  gap: 10px;
+  border-radius: 5px;
+  border: 1px solid white;
+}
+
+.descBtn-1.active,
+.descBtn.active {
+  background-color: white;
+  color: black;
+}
+
+.product-info {
+  margin-bottom: 10px;
+}
+.product-info table,
+tr {
+  width: 100%;
+  margin: 10px;
+  padding: 4px;
+}
+.product-info td {
+  padding: 7px;
+}
+.query span {
+  color: white;
+}
+.product-banner {
+    margin: 9rem auto;
+    width: 90%;
+    height: 379px;
+    color: white;
+    background-color: #102B26;
+    display: flex;
+    border-radius: 20px;
+}
+
+.banner-heading h2{
+    width: 90%;
+    font-size: 34.18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 40px;
+}
+
+.banner-heading p{
+    margin: 40px;
+}
+.contact-btn{
+    border-radius: 100px;
+    border: 1px solid #FFF;
+    width: 130px;
+    height: 35px;
+    background: #FFF;
+    box-shadow: 0px 4px 20px 0px rgba(255, 255, 255, 0.25);
+    color: black;
+    margin: 20px;
+    align-items: center;
+    justify-content: center;
+}
+.span-contact{
+    color: rgba(255, 255, 255, 0.50);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.drone-banner{
+    /* overflow: hidden; */
+    /* preserver 3; */
+    perspective: 3000px;
+    width: 50%;
+        position: absolute;
+        left: 70%;
+        /* left: -30%; */
+        /* top:69%; */
+        transform: translate(-50%, -50%);
+        justify-content: flex-end;
+        align-items: flex-start;
+        transform-style: preserve-3d;
+
+}
+
+/* Styles for screens with a maximum width of 768px (e.g., mobile phones) */
+@media (max-width: 768px) {
+    .heading-3 h1 {
+      font-size: 24px;
+    }
+  
+    .heading-3 p {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+  
+    .product {
+      flex-direction: column;
+      gap: 1rem;
+      margin: 10px;
+    }
+  
+    .product-left {
+      width: 100%;
+      height: 250px;
+    }
+  
+    .product-right {
+      width: 100%;
+      height: auto;
+    }
+  
+    .heading-product h2 {
+      font-size: 24px;
+    }
+  
+    .descBtn-1,
+    .descBtn {
+      width: 50px;
+      height: 25px;
+      margin: 5px;
+    }
+  
+    .product-info table,
+    tr {
+      margin: 5px;
+    }
+  
+    .product-info td {
+      padding: 5px;
+    }
+  
+    .contact-btn {
+      width: 100px;
+      height: 30px;
+      margin: 10px;
+    }
+  
+    .span-contact {
+      font-size: 12px;
+    }
+  
+    .drone-banner {
+      width: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  
+  /* Styles for screens with a minimum width of 769px (e.g., tablets and larger) */
+  @media (min-width: 769px) {
+    .heading-3 h1 {
+      font-size: 40px;
+    }
+  
+    .heading-3 p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+  
+    .product {
+      gap: 3rem;
+      margin: 25px;
+    }
+  
+    .product-left {
+      width: 500px;
+      height: 350px;
+    }
+  
+    .product-right {
+      width: 500px;
+      height: 350px;
+    }
+  
+    .heading-product h2 {
+      font-size: 34.18px;
+    }
+  
+    .descBtn-1,
+    .descBtn {
+      width: 66px;
+      height: 30px;
+      margin: 5px;
+    }
+  
+    .product-info table,
+    tr {
+      width: 100%;
+      margin: 10px;
+      padding: 4px;
+    }
+  
+    .product-info td {
+      padding: 7px;
+    }
+  
+    .contact-btn {
+      width: 130px;
+      height: 35px;
+      margin: 20px;
+    }
+  
+    .span-contact {
+      font-size: 14px;
+    }
+  
+    .drone-banner {
+      width: 50%;
+      left: 70%;
+      transform: translate(-50%, -50%);
+    }
+  }

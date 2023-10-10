@@ -4,7 +4,17 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      textColors: {
+        'primary': '#3490dc',
+        'secondary': '#53AF80',
+        'danger': '#e3342f',
+      },
+      fontFamily: {
+        'sansation': ['Sansation', 'sans'], // 'sans' is a generic fallback
+      },
+      // Other theme customizations
+    },
   },
   plugins: [],
 }
