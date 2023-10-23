@@ -195,7 +195,7 @@ line-height: 20px;
   
     .contact-form {
       margin: 20px 20px; /* Reduce margin for smaller screens */
-      width: 80%; /* Full width for smaller screens */
+      width: 90%; /* Full width for smaller screens */
       height: auto; /* Adjust height as needed */
       flex-direction: column; /* Stack form elements vertically */
     }

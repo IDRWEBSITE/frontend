@@ -191,17 +191,18 @@ tr {
     }
   
     .product-left {
-      width: 100%;
+      width: 90%;
       height: 250px;
     }
   
     .product-right {
-      width: 100%;
+      width: 90%;
       height: auto;
     }
   
     .heading-product h2 {
       font-size: 24px;
+      overflow: hidden;
     }
   
     .descBtn-1,
@@ -227,12 +228,14 @@ tr {
     }
   
     .span-contact {
-      font-size: 12px;
+      /* font-size: 12px; */
+      display: none;
     }
   
     .drone-banner {
-      width: 100%;
-      left: 50%;
+      width: 70%;
+      left: 65%;
+      top: 168%;
       transform: translateX(-50%);
     }
   }
