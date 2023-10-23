@@ -7,6 +7,7 @@
 }
 
 .navbar {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   overflow: hidden;
@@ -33,11 +34,13 @@
 
 .menu-toggle {
   display: none;
-  flex-direction: column;
+  /* flex-direction: column; */
   cursor: pointer;
+  justify-content: flex-end;
   background: none;
   border: none;
   outline: none;
+
 }
 
 .menu-toggle .bar {
@@ -69,10 +72,16 @@
   color: #ece6e6;
 }
 
+@media screen and (min-width:640px) {
+
+  
+}
 /* Media query for screens with a maximum width of 768px (e.g., mobile phones) */
 @media screen and (max-width: 768px) {
   .menu-toggle {
     display: flex;
+    position: absolute;
+    right: 20px;
   }
 
   .menu-toggle.open .bar:nth-child(1) {

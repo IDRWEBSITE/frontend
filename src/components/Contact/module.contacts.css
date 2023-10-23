@@ -195,13 +195,22 @@ line-height: 20px;
   
     .contact-form {
       margin: 20px 20px; /* Reduce margin for smaller screens */
-      width: 100%; /* Full width for smaller screens */
+      width: 80%; /* Full width for smaller screens */
       height: auto; /* Adjust height as needed */
       flex-direction: column; /* Stack form elements vertically */
     }
-  
+    .form-info{
+        margin-top: 0px;
+    }
+    .contact-details{
+        position: relative;
+        top: -20px;
+    }
+    .form-socials{
+        position: relative;
+    }
     .contact-form-left {
-      width: 100%; /* Full width for the left section */
+      width: 95%; /* Full width for the left section */
       height: auto; /* Adjust height as needed */
     }
   
