@@ -157,6 +157,10 @@ tr {
     font-weight: 400;
     line-height: normal;
 }
+/* .banner-right{
+  position: relative;
+} */
+
 .drone-banner{
     /* overflow: hidden; */
     /* preserver 3; */
@@ -226,18 +230,25 @@ tr {
       height: 30px;
       margin: 10px;
     }
-  
+    .product-banner{
+      height: 70%;
+    }
     .span-contact {
       /* font-size: 12px; */
       display: none;
     }
-  
-    .drone-banner {
-      width: 70%;
-      left: 65%;
-      top: 168%;
-      transform: translateX(-50%);
+    .banner-left{
+      overflow: hidden;
+      height: 100%;
     }
+
+    
+    .drone-banner {
+
+      display: none;;
+    }
+
+
   }
   
   /* Styles for screens with a minimum width of 769px (e.g., tablets and larger) */
@@ -299,8 +310,8 @@ tr {
     }
   
     .drone-banner {
-      width: 50%;
-      left: 70%;
+      width: 49%;
+      left: 77%;
       transform: translate(-50%, -50%);
     }
   }
