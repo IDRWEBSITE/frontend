@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@100;200;300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Poppins:wght@100;400;500;600;700;800;900&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.parallax {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mountains-bg {
+  background-image: url("../../assets/bg-drone.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+.heading-5 {
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+  width: 85%;
+  height: 92%;
+}
+h1 {
+  position: relative;
+  color: var(--grey, #ebebeb);
+  font-family: "Urbanist";
+  font-size: 88.359px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0 auto;
+}
+
+.inner-title {
+  text-align: center;
+  text-shadow: none;
+  font-size: 103.359px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: transparent;
+  font-family: "Urbanist";
+  -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgb(255, 255, 255);
+}
+.drone-feature {
+  background-image: url("../../assets/drone-1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  align-items: center;
+  justify-content: center;
+  bottom: 9%;
+  background-size: cover;
+  height: 50%;
+  width: 50%;
+  position: absolute;
+}
+.top-right-feature {
+  position: absolute;
+  right: 15%;
+}
+
+.top-right-feature-detail {
+  color: var(--Color, #fff);
+  text-align: center;
+  font-family: Open Sans;
+  font-size: 32.324px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.bottom-left-feature {
+  position: absolute;
+  left: 16%;
+  bottom: 10%;
+}
+.bottom-left-feature-detail {
+  color: var(--Color, #fff);
+
+  text-align: center;
+  font-family: Open Sans;
+  font-size: 32.324px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.top-left-feature {
+  position: absolute;
+  left: 21%;
+  /* display: none; */
+}
+.top-left-feature-detail {
+  color: var(--Color, #fff);
+
+  text-align: center;
+  font-family: Open Sans;
+  font-size: 32.324px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.bottom-right-feature {
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+  /* display: none; */
+}
+
+.bottom-right-feature-detail {
+  color: var(--Color, #fff);
+  text-align: center;
+  font-family: Open Sans;
+  font-size: 32.324px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}

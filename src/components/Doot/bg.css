@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@100;200;300;400;500;600;700;800&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.parallax{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+
+.doot-bg{
+    background-image: url('../../assets/doot-bg-img.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+
+}
+
+.heading-6 {
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    width: 70%;
+    height: 50%;
+}
+.heading-6 h1{
+    position: relative;
+    color: var(--grey, #ebebeb);
+    font-family: "Urbanist";
+    font-size: 88.359px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    height: 100px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.para-title{
+    position: relative;
+    color: var(--grey, #ebebeb);
+    font-family: "Urbanist";
+    font-size: 88.359px;
+    font-style: normal;
+    font-weight: 700;
+    height: 87px;
+    overflow: hidden;
+    line-height: normal;
+    margin: 0 auto;
+}
+
+.drone-3{
+    background-image: url("../../assets/drone-3.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    align-items: center;
+    justify-content: center;
+    bottom: 1%;
+    background-size: cover;
+    height: 73%;
+    width: 48%;
+    position: absolute;
+    z-index: 4;
+}
+.top-left-para{
+    color: white;
+    position: absolute;
+    width: 355px;
+    height: 180px;
+    left: 0px;
+    margin: 20px;
+    padding: 9px;
+
+}
+h2{
+    color: var(--Color, #FFF);
+    text-align: center;
+    font-family: Urbanist;
+    font-size: 50.162px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+}
+.top-right-para{
+    color: white;
+    position: absolute;
+    width: 355px;
+    height: 180px;
+    right: 0px;
+    margin: 20px;
+    padding: 5px;
+}
+.bottom-left-para{
+    color: white;
+    position: absolute;
+    width: 355px;
+    height: 180px;
+    left: 0px;
+    bottom: 0px;
+    margin: 20px;
+    padding: 9px;
+}
+.h2-span{
+    color: white;
+    position: absolute;
+    text-align: center;
+    font-family: Urbanist;
+    display: inline;
+
+}
+.bottom-right-para{
+    color: white;
+    position: absolute;
+    width: 355px;
+    height: 180px;
+    right: 0px;
+    bottom: 0px;
+    margin: 20px;
+    padding: 9px;
+}
