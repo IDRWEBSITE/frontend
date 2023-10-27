@@ -7,8 +7,8 @@ import KeyFeatures from '../components/KeyFeatures/KeyFeatures'
 const HomePage = () => {
   return (
     <div>
-      <NavBar />
-      <Home />
+{/*       <NavBar />
+      <Home /> */}
       <KeyFeatures/>
       <BG/>
 
