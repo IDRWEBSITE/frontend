@@ -29,6 +29,8 @@ html {
   height: 100%;
   width: 100%;
   position: absolute;
+  transform-origin: center; 
+  transform: scale(1.5);
 }
 .heading-5 {
   margin: 0 auto;
