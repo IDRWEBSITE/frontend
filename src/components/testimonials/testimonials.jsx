@@ -51,7 +51,7 @@ export const Testimonials = () => {
 
   return (
     <div>
-      <section className="lg:mt-12">
+      <section className="lg:mt-12 bg-black">
         <div className="py-24 w-4/5 mx-auto">
           <h1 className="pb-7 font-bold text-5xl text-white text-center">
             Satisfaction is a rating. Loyalty is a Brand

@@ -10,6 +10,7 @@ import Img7 from '../../assets/img7.png';
 import Img8 from '../../assets/img8.png';
 import Img9 from '../../assets/img9.png';
 import Img10 from '../../assets/image 7.jpg';
+import BG2 from '../../assets/BG2.png'
 
 const ImageGallery = () => {
 
@@ -59,7 +60,32 @@ const ImageGallery = () => {
 
   return (
     <div className='gallery-wrapper'>
-      <h1 className='heading5'>Image Gallery</h1>
+      <h1 className='heading5'>Gallery</h1>
+      <p className='subtext'> Our memorable moments</p>
+      <div className="logo-banner">
+        <div className="banner-img">
+          <img src={BG2} alt="banner-icon" />
+        </div>
+        <div className="banner-img">
+          <img src={BG2} alt="banner-icon" />
+        </div>
+        <div className="banner-img">
+          <img src={BG2} alt="banner-icon" />
+        </div>
+        <div className="banner-img">
+          <img src={BG2} alt="banner-icon" />
+        </div>
+        <div className="banner-img">
+          <img src={BG2} alt="banner-icon" />
+        </div>
+        <div className="banner-img">
+          <img src={BG2} alt="banner-icon" />
+        </div>
+        <div className="banner-img">
+          <img src={BG2} alt="banner-icon" />
+        </div>
+      </div>
+
       <div className="gallery">
         {data.map((item, index) => {
           return (

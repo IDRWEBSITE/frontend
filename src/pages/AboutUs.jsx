@@ -8,7 +8,6 @@ const AboutUs = () => {
     <div className="bg-black w-[100vw] h-[100vh]">
     <Navbar />
     <AboutComponent />
-    {/* <Testimonials /> */}
      <Footer />
     </div>
   )
