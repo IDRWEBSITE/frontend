@@ -40,6 +40,8 @@
     overflow-x: auto; */
     margin-top: 2rem;
     display: grid;
+    justify-content: center;
+    align-content: center;
     grid-template-rows: 1fr; /* Set a single row */
     grid-auto-flow: column; 
     gap: 10px;
@@ -109,7 +111,7 @@
 @media screen and (max-width: 480px) {
     .logo-banner {
         /* grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));*/
-         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+         grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
          overflow: hidden;
     }
 
