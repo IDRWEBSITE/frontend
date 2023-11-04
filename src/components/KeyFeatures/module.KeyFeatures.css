@@ -94,6 +94,7 @@ h1 {
   position: absolute;
   left: 16%;
   bottom: 10%;
+  top: 65%;
 }
 .bottom-left-feature-detail {
   color: var(--Color, #fff);
@@ -120,6 +121,7 @@ h1 {
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+  margin-top: -10%;
 }
 
 .bottom-right-feature {
@@ -137,4 +139,14 @@ h1 {
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+}
+
+@media screen and (max-width:768px) {
+  .bottom-left-feature-detail{
+    font-size: 25px;
+  }
+  .top-right-feature-detail{
+    font-size: 25px !important;
+   
+  }
 }

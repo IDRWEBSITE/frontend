@@ -1,47 +1,67 @@
 import "./module.KeyFeatures.css";
 import { useRef } from "react";
-import { motion,useScroll,useTransform, useAnimation, useInView, delay, easeIn } from "framer-motion";
+import {
+  motion,
+  useScroll,
+  useTransform,
+  useAnimation,
+  useInView,
+  delay,
+  easeIn,
+} from "framer-motion";
 // import { useInView } from "react-intersection-observer";
 
-
-
 const KeyFeatures = () => {
-    
-    const ref = useRef();
-    const {scrollYProgress} = useScroll({
-        target: ref
-    })
+  const ref = useRef();
+  const { scrollYProgress } = useScroll({
+    target: ref,
+  });
 
-
-    const variants = {
-        initial:{
-            x:0,
-            y:-100,
-            opacity: 0,
-        },
-        animate:{
-            x:0,
-            opacity:1,
-            y:0,
-            transition:{
-                duration:1,
-                staggerChildren: 0.1,
-            }
-        }
-    }
-    const isInView = useInView(ref)
+  const variants = {
+    initial: {
+      x: 0,
+      y: -100,
+      opacity: 0,
+    },
+    animate: {
+      x: 0,
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 1,
+        staggerChildren: 0.1,
+      },
+    },
+  };
+  const isInView = useInView(ref);
   return (
     <div className="parallax">
-      <motion.div className="mountains-bg" ></motion.div> {/*initial={{scale:1}} animate={{scale:1.5}} transition={{delay:1.5 ,easeIn}}*/}
-      <motion.div className="heading-5" initial={{y: -300, opacity:0}} animate={{y:0, opacity:1}} transition={{delay:1.5 ,easeIn}} >
+      <motion.div className="mountains-bg"></motion.div>{" "}
+      {/*initial={{scale:1}} animate={{scale:1.5}} transition={{delay:1.5 ,easeIn}}*/}
+      <motion.div
+        className="heading-5"
+        initial={{ y: -300, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ delay: 1.5, easeIn }}
+      >
         <h1>
           <span className="inner-title"> Key Features</span>
           <br />
           Doot Mk-1
         </h1>
       </motion.div>
-      <motion.div className="drone-feature" initial={{y:1000, opacity: 0}} animate={{y:0, opacity:1}} transition={{delay:1.5, easeIn }}></motion.div>
-      <motion.div className="top-right-feature" initial={{x:1000}} animate={{x:0}} transition={{delay:1.5, easeIn }} >
+      <motion.div
+        className="drone-feature"
+        initial={{ y: 1000, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ delay: 1.5, easeIn }}
+      ></motion.div>
+      <motion.div
+        className="top-right-feature"
+        initial={{ x: 1000 }}
+        animate={{ x: 0 }}
+        transition={{ delay: 1.5, easeIn }}
+      >
         <p className="top-right-feature-detail"> Maximum Speed :- 50 KM/H </p>
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -56,7 +76,12 @@ const KeyFeatures = () => {
           />
         </svg>
       </motion.div>
-      <motion.div className="bottom-left-feature" initial={{x:-1000, opacity:0}} animate={{x:0, opacity:1}} transition={{delay:1.5, easeIn }}>
+      <motion.div
+        className="bottom-left-feature"
+        initial={{ x: -1000, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ delay: 1.5, easeIn }}
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="299"
@@ -71,7 +96,12 @@ const KeyFeatures = () => {
         </svg>
         <p className="bottom-left-feature-detail"> 30 Minutes flight time </p>
       </motion.div>
-      <div className="top-left-feature" initial={{x:-1000, opacity:0}} animate={{x:0, opacity:1 }} transition={{delay:2.5, easeIn, duration:3 }}>
+      <div
+        className="top-left-feature"
+        initial={{ x: -1000, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ delay: 2.5, easeIn, duration: 3 }}
+      >
         <p className="top-left-feature-detail"> High-Resolution Camera </p>
 
         <svg
@@ -87,7 +117,12 @@ const KeyFeatures = () => {
           />
         </svg>
       </div>
-      <div className="bottom-right-feature" initial={{x:1000, opacity: 0}} animate={{x:0, opacity: 1}} transition={{delay:2.5, easeIn ,duration:3}} >
+      <div
+        className="bottom-right-feature"
+        initial={{ x: 1000, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ delay: 2.5, easeIn, duration: 3 }}
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="299"

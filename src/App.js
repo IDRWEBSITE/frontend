@@ -2,9 +2,10 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ContactUs,AboutUs,ExplorePage,Gallery,ProductsPage,HomePage } from './routes';
-
+import { ParallaxProvider } from 'react-scroll-parallax';
 function App() {
   return (
+    <ParallaxProvider>
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<HomePage />} />
@@ -15,6 +16,7 @@ function App() {
         <Route path='/products' element={<ProductsPage />} />
       </Routes>
     </BrowserRouter>
+    </ParallaxProvider>
   );
 }
 
