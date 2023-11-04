@@ -12,9 +12,9 @@ const HomePage = () => {
       <Home /> */}
 {/*       <NavBar />
       <Home /> */}
-      <KeyFeatures/>
+      {/* <KeyFeatures/>
       <BG/>
-      <Testimonials/>
+      <Testimonials/> */}
 
     </div>
   );
