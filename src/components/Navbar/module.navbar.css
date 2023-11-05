@@ -40,6 +40,7 @@
   justify-content: flex-end;
   background: none;
   border: none;
+  color:white;
   outline: none;
 
 }
@@ -65,7 +66,7 @@
 
 .links a {
   text-decoration: none;
-  color: white;
+  color: rgb(189, 188, 188);
   margin: 0 15px;
   transition: color 0.3s ease;
 }

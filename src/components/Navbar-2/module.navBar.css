@@ -11,10 +11,10 @@
     justify-content: space-between;
     overflow: hidden;
     align-items: center;
-    background: rgba(217, 217, 217, 0.25);
+    background: rgba(0,0,0,0.4);
     padding: 0px 20px;
-    z-index: 1000;
-    position:absolute;
+    /* z-index: 1000;
+    position:absolute; */
     width: 100%;
   }
   
@@ -37,6 +37,7 @@
     display: none;
     flex-direction: column;
     cursor: pointer;
+    justify-content: flex-end;
     background: none;
     border: none;
     outline: none;
@@ -62,7 +63,8 @@
   
   .links a {
     text-decoration: none;
-    color: #040404;
+    /* color: #040404; */
+    color: rgb(189, 188, 188);
     margin: 0 15px;
     transition: color 0.3s ease;
   }
