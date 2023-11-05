@@ -12,8 +12,9 @@
   justify-content: space-between;
   overflow: hidden;
   align-items: center;
-  background: rgba(217, 217, 217, 0.25);
+  background: rgb(39, 38, 38);
   padding: 0px 20px;
+  
 }
 
 .logo {
@@ -59,11 +60,12 @@
   font-family: Urbainist;
   font-weight: 500;
   line-height: normal;
+  
 }
 
 .links a {
   text-decoration: none;
-  color: #040404;
+  color: white;
   margin: 0 15px;
   transition: color 0.3s ease;
 }

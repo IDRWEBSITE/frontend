@@ -1,11 +1,11 @@
- import React, { useState } from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import logo from "../../assets/IDR Black Logo 2.png";
 import "./module.navbar.css"; // Import your CSS file for styling
 
 const Navbar = () => {
-  const [active , setActive] = useState('Explore');
-  const [toggle , setToggle] = useState(false);
+  const [active, setActive] = useState("Explore");
+  const [toggle, setToggle] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -54,14 +54,14 @@ export default Navbar;
 // return (
 //   <div className='shadow-md w-full fixed top-0 left-0'>
 //     <div className='md:flex items-center justify-between bg-white py-4 md:px-10 px-7'>
-//     <div className='font-bold text-2xl cursor-pointer flex items-center font-[Poppins] 
+//     <div className='font-bold text-2xl cursor-pointer flex items-center font-[Poppins]
 //     text-gray-800'>
 //       <span className='text-3xl text-indigo-600 mr-1 pt-2'>
 //       <BiMenuAltLeft />
 //       </span>
 //       Designer
 //     </div>
-    
+
 //     <div onClick={()=>setOpen(!open)} className='text-3xl absolute right-8 top-6 cursor-pointer md:hidden'>
 //     <ion-icon name={open ? 'close':'menu'}></ion-icon>
 //     </div>
