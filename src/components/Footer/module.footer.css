@@ -7,9 +7,10 @@ html{
 }
 .footer {
   position: relative;
-  background-color: #171717;;
+  background-color: black;
+  
   color: white;
-  padding: 30px 0;
+  /* padding: 30px 0; */
  
   background-attachment: fixed;
   text-align: center;
@@ -20,7 +21,7 @@ html{
 
 .footer-svg {
   position: absolute;
-  opacity: 0.04;
+  opacity: 0.09;
 }
 
 .footer-container{
@@ -41,6 +42,7 @@ html{
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: 50px;
 }
 .footer-logo{
   height: 120px;
