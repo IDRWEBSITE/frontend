@@ -13,7 +13,7 @@ const Testimonials = () => {
     <>
       <section className="testimonials-section">
         <div className="lg:mt-12 sm:mt-5 bg-black overflow-hidden">
-          <h1 className=" pb-7 font-bold text-2xl text-white text-center mt-8 sm:pb-0 sm:text-3xl md:text-4xl lg:text-5xl xl:mt-12">
+          <h1 className=" pb-7 overflow-hidden font-bold text-2xl text-white text-center mt-8 sm:pb-0 sm:text-3xl md:text-4xl lg:text-5xl xl:mt-12">
             Satisfaction is a rating. Loyalty is a Brand
           </h1>
           <p className="pb-14 text-3xl text-white text-center">

@@ -22,6 +22,7 @@ import drone1 from "../../assets/drone-1.png";
 import bannerBackground from "../../assets/banner-background.jpg";
 import droneProduct from "../../assets/drone-product-banner.png";
 import bgDrone from "../../assets/bg-drone.jpeg";
+import Testimonials from "../testimonials/testimonials";
 import {
   Parallax,
   BannerLayer,
@@ -315,6 +316,10 @@ const Home = () => {
           className="aspect-[2/1.2] "
         />
       </div>
+      {/* ----------testimonials------------ */}
+      <motion.div>
+        <Testimonials />
+      </motion.div>
     </div>
   );
 };

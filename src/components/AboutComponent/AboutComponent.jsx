@@ -1,6 +1,7 @@
 import React from "react";
 import "./module.about.css";
 import rectangle from "../../assets/Rectangle 3845.png";
+import article from '../../assets/article.jpeg';
 const AboutComponent = () => {
   return (
     <div className="wrapper-2">
@@ -208,7 +209,7 @@ const AboutComponent = () => {
             >
               <img
                 class="rounded-t-lg"
-                src="https://s3-alpha-sig.figma.com/img/45aa/7622/18fac0e20b31bbdfba3ac7f83a3d5b7b?Expires=1698019200&Signature=i5hQJ89-ePo-Qox9awk1842KY3iz-QZXrIb2Mg6k2ALUwaJTSg3CclvXKgp9sZowNeMwhnQFsNG-icL3iFpQAr75ipQqbKGvUxxGbqEyQ6BUOv7BfMntYjqbQd5t5fPxEYotJ7msyo6FyZmav6I0Qmylrq2PAJJGYC6wyVp2DvXE-98aoM1z3MuexeCbDT~LRUpW4MYoikgdmoU-T1nmAsQqqXy0SBpWdkfmWgpnfK6yFjtRI2m70obYumvVZFNYe1LVdxJ3vEoLutU~zgSXppNyd2Dq5QCZFKq-pfktVsyPsH6eqP3wbGNg~4pVJtlF5mN~Jh9xKRzGpXqGUf6YPw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                src={article}
                 alt=""
               />
               <a href="#!">
@@ -241,7 +242,7 @@ const AboutComponent = () => {
             >
               <img
                 class="rounded-t-lg"
-                src="https://s3-alpha-sig.figma.com/img/45aa/7622/18fac0e20b31bbdfba3ac7f83a3d5b7b?Expires=1698019200&Signature=i5hQJ89-ePo-Qox9awk1842KY3iz-QZXrIb2Mg6k2ALUwaJTSg3CclvXKgp9sZowNeMwhnQFsNG-icL3iFpQAr75ipQqbKGvUxxGbqEyQ6BUOv7BfMntYjqbQd5t5fPxEYotJ7msyo6FyZmav6I0Qmylrq2PAJJGYC6wyVp2DvXE-98aoM1z3MuexeCbDT~LRUpW4MYoikgdmoU-T1nmAsQqqXy0SBpWdkfmWgpnfK6yFjtRI2m70obYumvVZFNYe1LVdxJ3vEoLutU~zgSXppNyd2Dq5QCZFKq-pfktVsyPsH6eqP3wbGNg~4pVJtlF5mN~Jh9xKRzGpXqGUf6YPw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                src={article}
                 alt=""
               />
               <a href="#!">
@@ -274,7 +275,7 @@ const AboutComponent = () => {
             >
               <img
                 class="rounded-t-lg"
-                src="https://s3-alpha-sig.figma.com/img/45aa/7622/18fac0e20b31bbdfba3ac7f83a3d5b7b?Expires=1698019200&Signature=i5hQJ89-ePo-Qox9awk1842KY3iz-QZXrIb2Mg6k2ALUwaJTSg3CclvXKgp9sZowNeMwhnQFsNG-icL3iFpQAr75ipQqbKGvUxxGbqEyQ6BUOv7BfMntYjqbQd5t5fPxEYotJ7msyo6FyZmav6I0Qmylrq2PAJJGYC6wyVp2DvXE-98aoM1z3MuexeCbDT~LRUpW4MYoikgdmoU-T1nmAsQqqXy0SBpWdkfmWgpnfK6yFjtRI2m70obYumvVZFNYe1LVdxJ3vEoLutU~zgSXppNyd2Dq5QCZFKq-pfktVsyPsH6eqP3wbGNg~4pVJtlF5mN~Jh9xKRzGpXqGUf6YPw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                src={article}
                 alt=""
               />
               <a href="#!">
@@ -307,7 +308,7 @@ const AboutComponent = () => {
             >
               <img
                 class="rounded-t-lg"
-                src="https://s3-alpha-sig.figma.com/img/45aa/7622/18fac0e20b31bbdfba3ac7f83a3d5b7b?Expires=1698019200&Signature=i5hQJ89-ePo-Qox9awk1842KY3iz-QZXrIb2Mg6k2ALUwaJTSg3CclvXKgp9sZowNeMwhnQFsNG-icL3iFpQAr75ipQqbKGvUxxGbqEyQ6BUOv7BfMntYjqbQd5t5fPxEYotJ7msyo6FyZmav6I0Qmylrq2PAJJGYC6wyVp2DvXE-98aoM1z3MuexeCbDT~LRUpW4MYoikgdmoU-T1nmAsQqqXy0SBpWdkfmWgpnfK6yFjtRI2m70obYumvVZFNYe1LVdxJ3vEoLutU~zgSXppNyd2Dq5QCZFKq-pfktVsyPsH6eqP3wbGNg~4pVJtlF5mN~Jh9xKRzGpXqGUf6YPw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                src={article}
                 alt=""
               />
               <a href="#!">
@@ -342,19 +343,19 @@ const AboutComponent = () => {
         <p className="mx-auto mb-8 max-w-2xl font-Sansation text-gray-500 md:mb-12 sm:text-xl dark:text-white">GET NOTIFIED OF THE BEST OF OUR UPDATES</p>
         <form action="#">
           <div className="items-center mx-auto mb-3 space-y-4 max-w-screen-md sm:flex sm:space-y-0 gap-5">
-            <div className="relative w-[40%]">
+            <div className="relative w-[80%]">
               <label htmlFor="name" className="hidden mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Name</label>
               <div className="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
               </div>
               <input
-                className="block p-3 pl-10 w-full text-sm text-gray-900  rounded border border-gray-300 sm:rounded focus:ring-primary-500 focus:border-primary-500 dark:bg-transparent dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                className="block p-3 pl-10 w-full xxs:w-full text-sm text-gray-900  rounded border border-gray-300 sm:rounded focus:ring-primary-500 focus:border-primary-500 dark:bg-transparent dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 sm:p-2"
                 placeholder="Enter your name"
                 type="text"
                 id="name"
                 required
               />
             </div>
-            <div className="relative w-[40%]">
+            <div className="relative w-[80%]">
               <label htmlFor="email" className="hidden mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Email address</label>
               <div className="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
               </div>

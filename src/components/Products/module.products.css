@@ -231,7 +231,7 @@ tr {
       margin: 10px;
     }
     .product-banner{
-      height: 50%;
+      height: 70%;
     }
     .span-contact {
       /* font-size: 12px; */
@@ -245,7 +245,7 @@ tr {
     
     .drone-banner {
 
-      display: none;;
+      /* display: none;; */
     }
 
 

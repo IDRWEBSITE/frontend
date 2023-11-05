@@ -39,7 +39,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="wrapper-1">
+    <section className="wrapper-1">
       {/* <Navbar /> */}
       <div className="heading-1">
         <h1>Contact Us</h1>
@@ -313,7 +313,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

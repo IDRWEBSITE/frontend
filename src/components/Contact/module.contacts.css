@@ -96,6 +96,7 @@
 }
 .contact-details td{
     padding: 10px;
+    height: 100%;
 }
 
 .form-socials{
@@ -192,28 +193,46 @@ line-height: 20px;
 /* Media Queries for Smaller Screens (e.g., smartphones) */
 @media screen and (max-width: 768px) {
     /* Adjustments for smaller screens go here */
-  
+    .main-form{
+        background-image: none;
+        background-color: white;
+    }
     .contact-form {
       margin: 20px 20px; /* Reduce margin for smaller screens */
       width: 90%; /* Full width for smaller screens */
       height: auto; /* Adjust height as needed */
-      flex-direction: column; /* Stack form elements vertically */
+      flex-direction: column; 
+      border: 1px solid black;/* Stack form elements vertically */
+    }
+    .form-heading{
+        margin: 29px;   
     }
     .form-info{
-        margin-top: 0px;
+        margin-top: 10px;
     }
     .contact-details{
         position: relative;
         top: -20px;
+        width: 80%;
     }
     .form-socials{
         position: relative;
+
     }
     .contact-form-left {
       width: 95%; /* Full width for the left section */
       height: auto; /* Adjust height as needed */
     }
-  
+
+
+    .heading-1 h1 {
+        font-size: 24px;
+      }
+    
+      .heading-1 p {
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
     .contact-form-right {
       width: 100%; /* Full width for the right section */
       height: auto; /* Adjust height as needed */
@@ -256,6 +275,14 @@ line-height: 20px;
       height: 620px; /* Reset height for right section */
     }
   
+    .heading-1 h1 {
+        font-size: 40px;
+      }
+    
+      .heading-1 p {
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
     /* Additional adjustments as needed */
   }
   

@@ -69,6 +69,9 @@
       /* Add mobile-specific styles for the heading here */
       font-size: 36px; /* Example: Adjust font size for the heading on mobile screens */
     }
+    input{
+      width: 100%;
+    }
   }
   
   /* Tablet screens (768px to 1023px) */

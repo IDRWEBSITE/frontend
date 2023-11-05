@@ -13,6 +13,9 @@ module.exports = {
       fontFamily: {
         'sansation': ['Sansation', 'sans'], // 'sans' is a generic fallback
       },
+      screens: {
+        'xxs': '540px', // min-width
+      },
       // Other theme customizations
     },
   },
