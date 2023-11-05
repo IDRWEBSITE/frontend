@@ -102,6 +102,9 @@ font-size: 30px;
 width: 80%;
 font-weight: 600;
 }
+.gradient {
+    background: linear-gradient(rgba(14, 62, 151, 0.5) 50%, black);
+  }
 @media screen and (max-width:768px) {
     .main-title{
         font-size: 40px;
@@ -126,3 +129,33 @@ font-weight: 600;
         height: 100%;
     }
 }
+
+
+
+.gradient {
+    background: linear-gradient(rgba(14, 62, 151, 0.5) 50%, black);
+  }
+
+  .full {
+    height: 100vh;
+  }
+  .gray {
+    color: #446;
+  }
+  .inset {
+    position: absolute;
+    inset: 0;
+  }
+
+  .black-gradient {
+    background: linear-gradient( rgb(33, 32, 32),rgba(1, 9, 25, 0.5) 70%);
+  }
+
+  .gradient2{
+    background: linear-gradient( black, transparent 35%);
+
+  }
+  .gradient3{
+    background: linear-gradient( black, transparent 50%);
+
+  }

@@ -80,13 +80,29 @@ const Home = () => {
               </motion.div>
             ),
           },
+          {
+            opacity: [0, 1, "easeOutCubic"],
+            shouldAlwaysCompleteAnimation: true,
+            expanded: false,
+            children: <div className="gradient inset" />,
+          },
         ]}
-        className="aspect-[2/1.1]"
+        className="aspect-[2/1.1] full"
       />
       <ParallaxBanner
         style={{ height: "100vh" }}
         layers={[
-          { image: background, speed: 20 },
+          {
+            image: background,
+
+            speed: 20,
+          },
+          {
+            opacity: [0, 1, "easeOutCubic"],
+            shouldAlwaysCompleteAnimation: true,
+            expanded: false,
+            children: <div className="gradient2 inset" />,
+          },
           {
             speed: -15,
           },
@@ -132,19 +148,17 @@ const Home = () => {
             ),
           },
         ]}
-        className="aspect-[2/1.1] bg-black"
+        className="aspect-[2/1.1]  full"
       />
       <ParallaxBanner
         style={{ height: "100vh" }}
         layers={[
-          {
-            opacity: [0, 1, "easeOutCubic"],
-            shouldAlwaysCompleteAnimation: true,
-            expanded: false,
-            children: (
-              <div className="absolute inset-0 bg-black gradient inset" />
-            ),
-          },
+          // {
+          //   opacity: [0, 1, "easeOutCubic"],
+          //   shouldAlwaysCompleteAnimation: true,
+          //   expanded: false,
+          //   children: <div className="absolute inset-0 bg-black  inset" />,
+          // },
           {
             // speed: -20,
             opacity: [0, 1.5],
@@ -247,7 +261,7 @@ const Home = () => {
                         opacity: isInView ? 1 : 0,
 
                         transition:
-                          "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 3s",
+                          "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 2s",
                       }}
                     />
                   </div>
