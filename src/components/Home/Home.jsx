@@ -51,6 +51,7 @@ const Home = () => {
                     color: "var(--grey, #EBEBEB)",
                     textShadow: "0px 4px 34px rgba(130, 165, 107, 0.59)",
                     fontWeight: "700",
+                    marginBottom: "200px",
                   }}
                   className="main-title"
                 >
@@ -70,7 +71,11 @@ const Home = () => {
             children: (
               <motion.div
                 className="absolute inset-0 flex items-center justify-center urbanist"
-                style={{ margin: "auto" }}
+                style={{
+                  marginLeft: "auto",
+                  marginRight: "auto",
+                  marginBottom: "130px",
+                }}
                 initial={{ y: 300, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 1.5, easeIn }}
@@ -110,6 +115,7 @@ const Home = () => {
             image: mountain,
             speed: -10,
             opacity: [-1, 3],
+
             children: (
               <>
                 <Parallax
@@ -118,14 +124,17 @@ const Home = () => {
                   style={{ margin: "auto" }}
                   // opacity={[2, 0]}
                 >
-                  <h1 className="main-title">
+                  <h1
+                    className="main-title"
+                    style={{ marginBottom: "40%", marginLeft: "30%" }}
+                  >
                     <span className="inner-title">DOOT</span> MK-1
                   </h1>
                 </Parallax>
                 <Parallax
-                  translateY={[70, -20]}
+                  translateY={[70, -60]}
                   className="absolute inset-0 flex items-center urbanist"
-                  style={{ margin: "auto" }}
+                  style={{ marginLeft: "auto", marginRight: "auto" }}
                   // opacity={[2, 0]}
                 >
                   <img src={drone2} alt="" />
@@ -161,8 +170,9 @@ const Home = () => {
           // },
           {
             // speed: -20,
+            image: bannerBackground,
             opacity: [0, 1.5],
-            scale: [1.1, 0.8],
+            scale: [1.4, 1],
             translateY: [-20, 0],
             children: (
               <div
@@ -174,7 +184,11 @@ const Home = () => {
                   fontStyle: "normal",
                 }}
               >
-                <h1 className="main-title" style={{ lineHeight: "80%" }}>
+                <h1
+                  className="main-title"
+                  style={{ lineHeight: "80%" }}
+                  id="doot-title"
+                >
                   Empower your security <br /> with our{" "}
                   <span
                     className="inner-title"

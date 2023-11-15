@@ -93,6 +93,7 @@ font-family: urbanist;
 font-size: 50px;
 width: 80%;
 font-weight: 700;
+margin-bottom: 8%;
 
 }
 .doot-desc{
@@ -105,16 +106,26 @@ font-weight: 600;
 .gradient {
     background: linear-gradient(rgba(14, 62, 151, 0.5) 50%, black);
   }
+  /* .main-title{
+    margin-bottom: 30%;
+    margin-left: 30%;
+  } */
+
+  
 @media screen and (max-width:768px) {
     .main-title{
         font-size: 40px;
+        /* margin-bottom: 70%; */
     }
     .inner-title{
         font-size: 40px !important;
+        
     }
+    
     .main-title2{
         font-size: 20px;
         width: 100vw;
+        margin-bottom: 40%;
     }
     .doot-desc{
         font-size: 20px;
@@ -130,7 +141,12 @@ font-weight: 600;
     }
 }
 
-
+@media screen and (max-width:425px) {
+    #doot-title{
+        font-size: 28px;
+        
+    }
+}
 
 .gradient {
     background: linear-gradient(rgba(14, 62, 151, 0.5) 50%, black);
