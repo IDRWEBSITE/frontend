@@ -1,8 +1,33 @@
-import React from "react";
+import React, { useEffect } from 'react';
 import "./module.about.css";
 import rectangle from "../../assets/Rectangle 3845.png";
 import article from '../../assets/article.jpeg';
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';;
+
+
 const AboutComponent = () => {
+
+  const responsive = {
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 4000, min: 3000 },
+      items: 5
+    },
+    desktop: {
+      breakpoint: { max: 3100, min: 1000 },
+      items: 4
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1
+    }
+  };
+
   return (
     <div className="wrapper-2">
       <div className="hero-section">
@@ -126,45 +151,47 @@ const AboutComponent = () => {
 
       {/* MEET OUR TEAM  */}
       <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-        <div className="mx-auto mb-10 lg:max-w-xl sm:text-center">
+        <div className="mx-auto mb-10 lg:max-w-xl text-center">
           <p className="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-green-300 uppercase rounded-full bg-teal-accent-400">
             Our Team
           </p>
           <p className="text-base text-white md:text-xl">Meet Our Team</p>
         </div>
-        <div className="grid gap-10 mx-auto sm:grid-cols-2 lg:grid-cols-4 lg:max-w-screen-xl">
-          <div>
+        <Carousel responsive={responsive} itemClass="carousel-item-padding-40-px">
+            <div>
+              <div className="relative pb-56 mb-4 rounded shadow lg:pb-64">
+                <img
+                  className="absolute object-cover w-[90%] h-full rounded"
+                  src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=3&amp;h=750&amp;w=1260"
+                  alt="Person"
+                />
+              </div>
+              <div className="flex flex-col sm:text-center">
+                <p className="text-lg font-bold text-white">Mehul</p>
+                <p className="mb-5 text-xs text-green-300">Product Manager</p>
+                <div className="flex items-center space-x-3 sm:justify-center"></div>
+              </div>
+            </div>
+
+            <div>
+              <div className="relative pb-56 mb-4 rounded shadow lg:pb-64">
+                <img
+                  className="absolute object-cover w-[90%] h-full rounded"
+                  src="https://images.pexels.com/photos/2381069/pexels-photo-2381069.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
+                  alt="Person"
+                />
+              </div>
+              <div className="flex flex-col sm:text-center">
+                <p className="text-lg font-bold text-white">Akriti</p>
+                <p className="mb-5 text-xs text-green-300">Design Team Lead</p>
+                <div className="flex items-center space-x-3 sm:justify-center"></div>
+              </div>
+            </div>
+
+            <div>
             <div className="relative pb-56 mb-4 rounded shadow lg:pb-64">
               <img
-                className="absolute object-cover w-full h-full rounded"
-                src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=3&amp;h=750&amp;w=1260"
-                alt="Person"
-              />
-            </div>
-            <div className="flex flex-col sm:text-center">
-              <p className="text-lg font-bold text-white">Mehul</p>
-              <p className="mb-5 text-xs text-green-300">Product Manager</p>
-              <div className="flex items-center space-x-3 sm:justify-center"></div>
-            </div>
-          </div>
-          <div>
-            <div className="relative pb-56 mb-4 rounded shadow lg:pb-64">
-              <img
-                className="absolute object-cover w-full h-full rounded"
-                src="https://images.pexels.com/photos/2381069/pexels-photo-2381069.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-                alt="Person"
-              />
-            </div>
-            <div className="flex flex-col sm:text-center">
-              <p className="text-lg font-bold text-white">Akriti</p>
-              <p className="mb-5 text-xs text-green-300">Design Team Lead</p>
-              <div className="flex items-center space-x-3 sm:justify-center"></div>
-            </div>
-          </div>
-          <div>
-            <div className="relative pb-56 mb-4 rounded shadow lg:pb-64">
-              <img
-                className="absolute object-cover w-full h-full rounded"
+                className="absolute object-cover w-[90%] h-full rounded"
                 src="https://images.pexels.com/photos/3747435/pexels-photo-3747435.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
                 alt="Person"
               />
@@ -175,10 +202,11 @@ const AboutComponent = () => {
               <div className="flex items-center space-x-3 sm:justify-center"></div>
             </div>
           </div>
+
           <div>
             <div className="relative pb-56 mb-4 rounded shadow lg:pb-64">
               <img
-                className="absolute object-cover w-full h-full rounded"
+                className="absolute object-cover w-[90%] h-full rounded"
                 src="https://images.pexels.com/photos/3931603/pexels-photo-3931603.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
                 alt="Person"
               />
@@ -189,19 +217,114 @@ const AboutComponent = () => {
               <div className="flex items-center space-x-3 sm:justify-center"></div>
             </div>
           </div>
-        </div>
+
+          <div>
+              <div className="relative pb-56 mb-4 rounded shadow lg:pb-64">
+                <img
+                  className="absolute object-cover w-[90%] h-full rounded"
+                  src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=3&amp;h=750&amp;w=1260"
+                  alt="Person"
+                />
+              </div>
+              <div className="flex flex-col sm:text-center">
+                <p className="text-lg font-bold text-white">Mehul</p>
+                <p className="mb-5 text-xs text-green-300">Product Manager</p>
+                <div className="flex items-center space-x-3 sm:justify-center"></div>
+              </div>
+            </div>
+
+            <div>
+              <div className="relative pb-56 mb-4 rounded shadow lg:pb-64">
+                <img
+                  className="absolute object-cover w-[90%] h-full rounded"
+                  src="https://images.pexels.com/photos/2381069/pexels-photo-2381069.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
+                  alt="Person"
+                />
+              </div>
+              <div className="flex flex-col sm:text-center">
+                <p className="text-lg font-bold text-white">Akriti</p>
+                <p className="mb-5 text-xs text-green-300">Design Team Lead</p>
+                <div className="flex items-center space-x-3 sm:justify-center"></div>
+              </div>
+            </div>
+
+            <div>
+            <div className="relative pb-56 mb-4 rounded shadow lg:pb-64">
+              <img
+                className="absolute object-cover w-[90%] h-full rounded"
+                src="https://images.pexels.com/photos/3747435/pexels-photo-3747435.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
+                alt="Person"
+              />
+            </div>
+            <div className="flex flex-col sm:text-center">
+              <p className="text-lg font-bold text-white">Anjali</p>
+              <p className="mb-5 text-xs text-green-300">Human Resources</p>
+              <div className="flex items-center space-x-3 sm:justify-center"></div>
+            </div>
+          </div>
+
+          <div>
+            <div className="relative pb-56 mb-4 rounded shadow lg:pb-64">
+              <img
+                className="absolute object-cover w-[90%] h-full rounded"
+                src="https://images.pexels.com/photos/3931603/pexels-photo-3931603.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
+                alt="Person"
+              />
+            </div>
+            <div className="flex flex-col sm:text-center">
+              <p className="text-lg font-bold text-white">Mayank</p>
+              <p className="mb-5 text-xs text-green-300">Good guy</p>
+              <div className="flex items-center space-x-3 sm:justify-center"></div>
+            </div>
+          </div>
+        </Carousel>
+
       </div>
 
       {/* Our Articles  */}
       <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-        <div className="mx-auto mb-10 lg:max-w-xl sm:text-center">
+        <div className="mx-auto mb-10 lg:max-w-xl text-center">
           <p className="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-green-300 uppercase rounded-full bg-teal-accent-400">
             Our Articles
           </p>
           <p className="text-base text-white md:text-xl">Our Latest News</p>
         </div>
-        <div className="grid gap-10 mx-auto sm:grid-cols-2 lg:grid-cols-4 lg:max-w-screen-xl">
-          <div class="block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
+        <Carousel responsive={responsive} itemClass="carousel-item-padding-40-px" >
+        <div class="block rounded-lg w-[90%] bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
+            <div
+              class="relative overflow-hidden bg-cover bg-no-repeat"
+              data-te-ripple-init
+              data-te-ripple-color="light"
+            >
+              <img
+                class="rounded-t-lg "
+                src={article}
+                alt=""
+              />
+              <a href="#!">
+                <div class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsla(0,0%,98%,0.15)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
+              </a>
+            </div>
+            <div class="p-6  bg-gray-100">
+              <h5 class="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-black overflow-hidden">
+                Card title
+              </h5>
+              <p class="mb-4 text-base text-neutral-600 dark:text-black">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <button
+                type="button"
+                class="inline-block  bg-green-300 hover:bg-green-500 rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+                data-te-ripple-init
+                data-te-ripple-color="light"
+              >
+                Read more
+              </button>
+            </div>
+          </div>
+
+          <div class="block rounded-lg w-[90%] bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
             <div
               class="relative overflow-hidden bg-cover bg-no-repeat"
               data-te-ripple-init
@@ -234,7 +357,8 @@ const AboutComponent = () => {
               </button>
             </div>
           </div>
-          <div class="block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
+
+          <div class="block rounded-lg w-[90%] bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
             <div
               class="relative overflow-hidden bg-cover bg-no-repeat"
               data-te-ripple-init
@@ -267,40 +391,8 @@ const AboutComponent = () => {
               </button>
             </div>
           </div>
-          <div class="block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
-            <div
-              class="relative overflow-hidden bg-cover bg-no-repeat"
-              data-te-ripple-init
-              data-te-ripple-color="light"
-            >
-              <img
-                class="rounded-t-lg"
-                src={article}
-                alt=""
-              />
-              <a href="#!">
-                <div class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsla(0,0%,98%,0.15)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
-              </a>
-            </div>
-            <div class="p-6 bg-gray-100 ">
-              <h5 class="mb-2 text-xl font-medium leading-tight text-black dark:text-black overflow-hidden">
-                Card title
-              </h5>
-              <p class="mb-4 text-base text-black dark:text-black">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-              <button
-                type="button"
-                class="inline-block  bg-green-300 hover:bg-green-500 rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
-                data-te-ripple-init
-                data-te-ripple-color="light"
-              >
-                Read more
-              </button>
-            </div>
-          </div>
-          <div class="block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
+
+          <div class="block rounded-lg w-[90%] bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
             <div
               class="relative overflow-hidden bg-cover bg-no-repeat"
               data-te-ripple-init
@@ -325,7 +417,7 @@ const AboutComponent = () => {
               </p>
               <button
                 type="button"
-                class="inline-block bg-green-300 hover:bg-green-500 rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+                class="inline-block  bg-green-300 hover:bg-green-500 rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
                 data-te-ripple-init
                 data-te-ripple-color="light"
               >
@@ -333,7 +425,144 @@ const AboutComponent = () => {
               </button>
             </div>
           </div>
-        </div>
+
+          <div class="block rounded-lg w-[90%] bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
+            <div
+              class="relative overflow-hidden bg-cover bg-no-repeat"
+              data-te-ripple-init
+              data-te-ripple-color="light"
+            >
+              <img
+                class="rounded-t-lg"
+                src={article}
+                alt=""
+              />
+              <a href="#!">
+                <div class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsla(0,0%,98%,0.15)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
+              </a>
+            </div>
+            <div class="p-6  bg-gray-100">
+              <h5 class="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-black overflow-hidden">
+                Card title
+              </h5>
+              <p class="mb-4 text-base text-neutral-600 dark:text-black">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <button
+                type="button"
+                class="inline-block  bg-green-300 hover:bg-green-500 rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+                data-te-ripple-init
+                data-te-ripple-color="light"
+              >
+                Read more
+              </button>
+            </div>
+          </div>
+
+          <div class="block rounded-lg w-[90%] bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
+            <div
+              class="relative overflow-hidden bg-cover bg-no-repeat"
+              data-te-ripple-init
+              data-te-ripple-color="light"
+            >
+              <img
+                class="rounded-t-lg"
+                src={article}
+                alt=""
+              />
+              <a href="#!">
+                <div class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsla(0,0%,98%,0.15)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
+              </a>
+            </div>
+            <div class="p-6  bg-gray-100">
+              <h5 class="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-black overflow-hidden">
+                Card title
+              </h5>
+              <p class="mb-4 text-base text-neutral-600 dark:text-black">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <button
+                type="button"
+                class="inline-block  bg-green-300 hover:bg-green-500 rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+                data-te-ripple-init
+                data-te-ripple-color="light"
+              >
+                Read more
+              </button>
+            </div>
+          </div>
+
+          <div class="block rounded-lg w-[90%] bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
+            <div
+              class="relative overflow-hidden bg-cover bg-no-repeat"
+              data-te-ripple-init
+              data-te-ripple-color="light"
+            >
+              <img
+                class="rounded-t-lg"
+                src={article}
+                alt=""
+              />
+              <a href="#!">
+                <div class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsla(0,0%,98%,0.15)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
+              </a>
+            </div>
+            <div class="p-6  bg-gray-100">
+              <h5 class="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-black overflow-hidden">
+                Card title
+              </h5>
+              <p class="mb-4 text-base text-neutral-600 dark:text-black">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <button
+                type="button"
+                class="inline-block  bg-green-300 hover:bg-green-500 rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+                data-te-ripple-init
+                data-te-ripple-color="light"
+              >
+                Read more
+              </button>
+            </div>
+          </div>
+
+          <div class="block rounded-lg w-[90%] bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
+            <div
+              class="relative overflow-hidden bg-cover bg-no-repeat"
+              data-te-ripple-init
+              data-te-ripple-color="light"
+            >
+              <img
+                class="rounded-t-lg"
+                src={article}
+                alt=""
+              />
+              <a href="#!">
+                <div class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsla(0,0%,98%,0.15)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
+              </a>
+            </div>
+            <div class="p-6  bg-gray-100">
+              <h5 class="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-black overflow-hidden">
+                Card title
+              </h5>
+              <p class="mb-4 text-base text-neutral-600 dark:text-black">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <button
+                type="button"
+                class="inline-block  bg-green-300 hover:bg-green-500 rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+                data-te-ripple-init
+                data-te-ripple-color="light"
+              >
+                Read more
+              </button>
+            </div>
+          </div>
+        </Carousel>
+        
       </div>
 
       {/* NEWSLETTER  */}

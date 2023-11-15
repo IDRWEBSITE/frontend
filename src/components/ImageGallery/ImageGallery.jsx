@@ -8,9 +8,7 @@ import Img5 from '../../assets/img5.png';
 import Img6 from '../../assets/img6.png';
 import Img7 from '../../assets/img7.png';
 import Img8 from '../../assets/img8.png';
-import Img9 from '../../assets/img9.png';
-import Img10 from '../../assets/image 7.jpg';
-import BG2 from '../../assets/BG2.png'
+
 
 const ImageGallery = () => {
 
@@ -47,14 +45,7 @@ const ImageGallery = () => {
         id: 8,
         imgSrc: Img8,
     },
-    {
-        id: 9,
-        imgSrc: Img9,
-    },
-    {
-        id: 10,
-        imgSrc: Img10,
-    },
+
 
   ]
 
@@ -62,29 +53,7 @@ const ImageGallery = () => {
     <div className='gallery-wrapper'>
       <h1 className='heading5'>Gallery</h1>
       <p className='subtext'> Our memorable moments</p>
-      <div className="logo-banner">
-        <div className="banner-img">
-          <img src={BG2} alt="banner-icon" />
-        </div>
-        <div className="banner-img">
-          <img src={BG2} alt="banner-icon" />
-        </div>
-        <div className="banner-img">
-          <img src={BG2} alt="banner-icon" />
-        </div>
-        <div className="banner-img">
-          <img src={BG2} alt="banner-icon" />
-        </div>
-        <div className="banner-img">
-          <img src={BG2} alt="banner-icon" />
-        </div>
-        <div className="banner-img">
-          <img src={BG2} alt="banner-icon" />
-        </div>
-        <div className="banner-img">
-          <img src={BG2} alt="banner-icon" />
-        </div>
-      </div>
+      
 
       <div className="gallery">
         {data.map((item, index) => {
@@ -99,15 +68,4 @@ const ImageGallery = () => {
   )
 }
 
-export default ImageGallery
-// import React from 'react'
-
-// const ImageGallery = () => {
-//   return (
-//     <div>
-      
-//     </div>
-//   )
-// }
-
-// export default ImageGallery
+export default ImageGallery;
