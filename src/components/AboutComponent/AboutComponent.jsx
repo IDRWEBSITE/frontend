@@ -161,7 +161,7 @@ const AboutComponent = () => {
             <div>
               <div className="relative pb-56 mb-4 rounded shadow lg:pb-64">
                 <img
-                  className="absolute object-cover w-[90%] h-full rounded"
+                  className="absolute object-cover w-[90%] h-full m-2 rounded "
                   src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=3&amp;h=750&amp;w=1260"
                   alt="Person"
                 />
@@ -176,7 +176,7 @@ const AboutComponent = () => {
             <div>
               <div className="relative pb-56 mb-4 rounded shadow lg:pb-64">
                 <img
-                  className="absolute object-cover w-[90%] h-full rounded"
+                  className="absolute object-cover w-[90%] m-2  h-full rounded"
                   src="https://images.pexels.com/photos/2381069/pexels-photo-2381069.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
                   alt="Person"
                 />
@@ -191,7 +191,7 @@ const AboutComponent = () => {
             <div>
             <div className="relative pb-56 mb-4 rounded shadow lg:pb-64">
               <img
-                className="absolute object-cover w-[90%] h-full rounded"
+                className="absolute object-cover w-[90%] m-2 h-full rounded"
                 src="https://images.pexels.com/photos/3747435/pexels-photo-3747435.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
                 alt="Person"
               />
@@ -206,7 +206,7 @@ const AboutComponent = () => {
           <div>
             <div className="relative pb-56 mb-4 rounded shadow lg:pb-64">
               <img
-                className="absolute object-cover w-[90%] h-full rounded"
+                className="absolute object-cover w-[90%] m-2  h-full rounded"
                 src="https://images.pexels.com/photos/3931603/pexels-photo-3931603.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
                 alt="Person"
               />
@@ -221,7 +221,7 @@ const AboutComponent = () => {
           <div>
               <div className="relative pb-56 mb-4 rounded shadow lg:pb-64">
                 <img
-                  className="absolute object-cover w-[90%] h-full rounded"
+                  className="absolute object-cover w-[90%] m-2  h-full rounded"
                   src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=3&amp;h=750&amp;w=1260"
                   alt="Person"
                 />
@@ -236,7 +236,7 @@ const AboutComponent = () => {
             <div>
               <div className="relative pb-56 mb-4 rounded shadow lg:pb-64">
                 <img
-                  className="absolute object-cover w-[90%] h-full rounded"
+                  className="absolute object-cover w-[90%] m-2  h-full rounded"
                   src="https://images.pexels.com/photos/2381069/pexels-photo-2381069.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
                   alt="Person"
                 />
@@ -251,7 +251,7 @@ const AboutComponent = () => {
             <div>
             <div className="relative pb-56 mb-4 rounded shadow lg:pb-64">
               <img
-                className="absolute object-cover w-[90%] h-full rounded"
+                className="absolute object-cover w-[90%] m-2  h-full rounded"
                 src="https://images.pexels.com/photos/3747435/pexels-photo-3747435.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
                 alt="Person"
               />
@@ -266,7 +266,7 @@ const AboutComponent = () => {
           <div>
             <div className="relative pb-56 mb-4 rounded shadow lg:pb-64">
               <img
-                className="absolute object-cover w-[90%] h-full rounded"
+                className="absolute object-cover w-[90%] m-2  h-full rounded"
                 src="https://images.pexels.com/photos/3931603/pexels-photo-3931603.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
                 alt="Person"
               />
@@ -290,7 +290,7 @@ const AboutComponent = () => {
           <p className="text-base text-white md:text-xl">Our Latest News</p>
         </div>
         <Carousel responsive={responsive} itemClass="carousel-item-padding-40-px" >
-        <div class="block rounded-lg w-[90%] bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
+        <div class="block rounded-lg w-[90%] m-3 bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
             <div
               class="relative overflow-hidden bg-cover bg-no-repeat"
               data-te-ripple-init
@@ -324,7 +324,7 @@ const AboutComponent = () => {
             </div>
           </div>
 
-          <div class="block rounded-lg w-[90%] bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
+          <div class="block rounded-lg w-[90%] m-3 bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
             <div
               class="relative overflow-hidden bg-cover bg-no-repeat"
               data-te-ripple-init
@@ -358,7 +358,7 @@ const AboutComponent = () => {
             </div>
           </div>
 
-          <div class="block rounded-lg w-[90%] bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
+          <div class="block rounded-lg w-[90%]  m-3 bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
             <div
               class="relative overflow-hidden bg-cover bg-no-repeat"
               data-te-ripple-init
@@ -392,7 +392,7 @@ const AboutComponent = () => {
             </div>
           </div>
 
-          <div class="block rounded-lg w-[90%] bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
+          <div class="block rounded-lg w-[90%] m-3 bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
             <div
               class="relative overflow-hidden bg-cover bg-no-repeat"
               data-te-ripple-init
@@ -426,7 +426,7 @@ const AboutComponent = () => {
             </div>
           </div>
 
-          <div class="block rounded-lg w-[90%] bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
+          <div class="block rounded-lg w-[90%] m-3 bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
             <div
               class="relative overflow-hidden bg-cover bg-no-repeat"
               data-te-ripple-init
@@ -460,7 +460,7 @@ const AboutComponent = () => {
             </div>
           </div>
 
-          <div class="block rounded-lg w-[90%] bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
+          <div class="block rounded-lg w-[90%] m-3 bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
             <div
               class="relative overflow-hidden bg-cover bg-no-repeat"
               data-te-ripple-init
@@ -494,7 +494,7 @@ const AboutComponent = () => {
             </div>
           </div>
 
-          <div class="block rounded-lg w-[90%] bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
+          <div class="block rounded-lg w-[90%] m-3 bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
             <div
               class="relative overflow-hidden bg-cover bg-no-repeat"
               data-te-ripple-init
@@ -528,7 +528,7 @@ const AboutComponent = () => {
             </div>
           </div>
 
-          <div class="block rounded-lg w-[90%] bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
+          <div class="block rounded-lg w-[90%] m-3 bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
             <div
               class="relative overflow-hidden bg-cover bg-no-repeat"
               data-te-ripple-init
