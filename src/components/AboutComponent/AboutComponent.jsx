@@ -166,7 +166,7 @@ const AboutComponent = () => {
                   alt="Person"
                 />
               </div>
-              <div className="flex flex-col sm:text-center">
+              <div className="flex flex-col text-center">
                 <p className="text-lg font-bold text-white">Mehul</p>
                 <p className="mb-5 text-xs text-green-300">Product Manager</p>
                 <div className="flex items-center space-x-3 sm:justify-center"></div>
@@ -181,7 +181,7 @@ const AboutComponent = () => {
                   alt="Person"
                 />
               </div>
-              <div className="flex flex-col sm:text-center">
+              <div className="flex flex-col text-center">
                 <p className="text-lg font-bold text-white">Akriti</p>
                 <p className="mb-5 text-xs text-green-300">Design Team Lead</p>
                 <div className="flex items-center space-x-3 sm:justify-center"></div>
@@ -196,7 +196,7 @@ const AboutComponent = () => {
                 alt="Person"
               />
             </div>
-            <div className="flex flex-col sm:text-center">
+            <div className="flex flex-col text-center">
               <p className="text-lg font-bold text-white">Anjali</p>
               <p className="mb-5 text-xs text-green-300">Human Resources</p>
               <div className="flex items-center space-x-3 sm:justify-center"></div>
@@ -211,7 +211,7 @@ const AboutComponent = () => {
                 alt="Person"
               />
             </div>
-            <div className="flex flex-col sm:text-center">
+            <div className="flex flex-col text-center">
               <p className="text-lg font-bold text-white">Mayank</p>
               <p className="mb-5 text-xs text-green-300">Good guy</p>
               <div className="flex items-center space-x-3 sm:justify-center"></div>
@@ -226,7 +226,7 @@ const AboutComponent = () => {
                   alt="Person"
                 />
               </div>
-              <div className="flex flex-col sm:text-center">
+              <div className="flex flex-col text-center">
                 <p className="text-lg font-bold text-white">Mehul</p>
                 <p className="mb-5 text-xs text-green-300">Product Manager</p>
                 <div className="flex items-center space-x-3 sm:justify-center"></div>
@@ -241,7 +241,7 @@ const AboutComponent = () => {
                   alt="Person"
                 />
               </div>
-              <div className="flex flex-col sm:text-center">
+              <div className="flex flex-col text-center">
                 <p className="text-lg font-bold text-white">Akriti</p>
                 <p className="mb-5 text-xs text-green-300">Design Team Lead</p>
                 <div className="flex items-center space-x-3 sm:justify-center"></div>
@@ -256,7 +256,7 @@ const AboutComponent = () => {
                 alt="Person"
               />
             </div>
-            <div className="flex flex-col sm:text-center">
+            <div className="flex flex-col text-center">
               <p className="text-lg font-bold text-white">Anjali</p>
               <p className="mb-5 text-xs text-green-300">Human Resources</p>
               <div className="flex items-center space-x-3 sm:justify-center"></div>
@@ -271,7 +271,7 @@ const AboutComponent = () => {
                 alt="Person"
               />
             </div>
-            <div className="flex flex-col sm:text-center">
+            <div className="flex flex-col text-center">
               <p className="text-lg font-bold text-white">Mayank</p>
               <p className="mb-5 text-xs text-green-300">Good guy</p>
               <div className="flex items-center space-x-3 sm:justify-center"></div>
