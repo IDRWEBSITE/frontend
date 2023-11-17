@@ -9,10 +9,21 @@
 
 
 }
+.react-multi-carousel-list {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    /* height: 100%; */
+    /* width: 100%; */
+    /* z-index: 1000000; */
+}
 .wrapper-testimonials{
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100%;
+    width: 100%;
 }
 
 .mySwiper{
@@ -42,6 +53,11 @@
 
 .slide-content{
     margin: 0 40px;
+}
+.testimonial{
+    border-radius: 25px;
+    border: 2px solid white;
+    width: 90%;
 }
 .card{
     width: 320px;
