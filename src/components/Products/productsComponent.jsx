@@ -4,11 +4,24 @@ import instock from "../../assets/InStock.png";
 import chip from "../../assets/Chip.svg";
 import megapixel from "../../assets/megapixels 1.png";
 import drone from '../../assets/drone-product-banner.png'
+// import CloseButton from 'react-bootstrap/CloseButton';
+import { AiOutlineClose } from 'react-icons/ai';
+import Img from '../../assets/drone-1.png'
+
 const ProductsComponent = () => {
   const [activeButton, setActiveButton] = useState("stealth");
+  const [popupActive, setPopupActive] = useState(false);
 
   const handleButtonClick = (buttonId) => {
     setActiveButton(buttonId);
+  };
+
+  const openPopup = () => {
+    setPopupActive(true);
+  };
+
+  const closePopup = () => {
+    setPopupActive(false);
   };
 
   return (
@@ -177,7 +190,32 @@ const ProductsComponent = () => {
                     <td>EN-EL15c rechargeable Li-ion battery</td>
                   </tr>
                 </table>
-                <a href="http://" className="text-decoration underline mb-8">View All Tech Specs</a>
+                {/* ---------- POP UP BTN ------------- */}
+                <a href="#" className="text-decoration underline mb-8 cursor-pointer" onClick={openPopup}>View All Tech Specs</a> 
+              </div>
+              <div className={`popup-view ${popupActive ? 'active' : ''}`}>
+                <div className="popup-card">
+                  <a href="" className="close-btn" onClick={closePopup}><AiOutlineClose /></a>
+                  {/* ----- img carousal -----  */}
+                  <div className="product-img" id="image1"> 
+                    <img src={Img} alt="" />
+                  </div>
+                 
+                  <div className="info">
+                    <h2>Doot MK-1 <br/> <span></span></h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus eos eveniet cupiditate corruption</p>
+                    <div className="extra-features">
+                      <h2>feature-1</h2>
+                      <p>feature-1 desc</p>
+                      <h2>feature-2</h2>
+                      <p>feature-2 desc</p>
+                      <h2>feature-3</h2>
+                      <p>feature-3 desc</p>
+                    </div>
+                  </div>
+
+
+                </div>
               </div>
               <hr />  
               <div className="query">
