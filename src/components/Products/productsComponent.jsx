@@ -6,6 +6,7 @@ import megapixel from "../../assets/megapixels 1.png";
 import drone from '../../assets/drone-product-banner.png'
 // import CloseButton from 'react-bootstrap/CloseButton';
 import { AiOutlineClose } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
 import Img from '../../assets/drone-1.png'
 
 const ProductsComponent = () => {
@@ -22,6 +23,10 @@ const ProductsComponent = () => {
 
   const closePopup = () => {
     setPopupActive(false);
+  };
+
+  const handleClick = () => {
+    window.scrollTo(0, 0); // Scrolls to the top when the button is clicked
   };
 
   return (
@@ -191,6 +196,7 @@ const ProductsComponent = () => {
                   </tr>
                 </table>
                 {/* ---------- POP UP BTN ------------- */}
+                {/* // eslint-disable-next-line */}
                 <a href="#" className="text-decoration underline mb-8 cursor-pointer" onClick={openPopup}>View All Tech Specs</a> 
               </div>
               <div className={`popup-view ${popupActive ? 'active' : ''}`}>
@@ -240,7 +246,9 @@ const ProductsComponent = () => {
               5pm.
             </p>
             <div>
+            <Link to="/contact-us" onClick={handleClick} style={{ textDecoration: 'none' }}>
               <button className="contact-btn">Contact us</button>
+            </Link>
               <span className="span-contact">You'll get a response within 24 hours</span>
             </div>
           </div>

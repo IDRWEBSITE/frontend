@@ -26,7 +26,7 @@ const Testimonials = () => {
         {/* <div className="wrapper-testimonials"> */}
           <Carousel
             responsive={responsive}
-            itemClass="carousel-item-padding-40-px"
+            itemClass="carousel-item-padding-40-px" 
           >
             {/* Testimonial slides */}
             <div className="testimonial">

@@ -69,7 +69,7 @@
       font-size: 36px; /* Example: Adjust font size for the heading on mobile screens */
     }
     input{
-      width: 100%;
+      /* width: 100%; */
     }
   }
   

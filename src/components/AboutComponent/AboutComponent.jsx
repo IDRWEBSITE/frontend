@@ -158,15 +158,15 @@ const AboutComponent = () => {
           <p className="text-base text-white md:text-xl">Meet Our Team</p>
         </div>
         <Carousel responsive={responsive} itemClass="carousel-item-padding-40-px">
-            <div>
-              <div className="relative pb-56 mb-4 overflow-hidden rounded shadow lg:pb-64">
+            <div className='mx-auto align-middle'>
+              <div className="relative pb-56 m-0 mx-auto overflow-hidden rounded shadow lg:pb-64 flex items-center justify-center">
                 <img
-                  className="absolute object-cover w-[90%] h-full rounded"
+                  className="absolute inset-0 object-cover w-5/6 h-full mx-auto rounded"
                   src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=3&amp;h=750&amp;w=1260"
                   alt="Person"
                 />
               </div>
-              <div className="flex flex-col sm:text-center">
+              <div className="flex flex-col text-center">
                 <p className="text-lg font-bold text-white">Mehul</p>
                 <p className="mb-5 text-xs text-green-300">Product Manager</p>
                 <div className="flex items-center space-x-3 sm:justify-center"></div>
@@ -176,12 +176,12 @@ const AboutComponent = () => {
             <div>
               <div className="relative pb-56 mb-4  overflow-hidden rounded shadow lg:pb-64">
                 <img
-                  className="absolute object-cover w-[90%] h-full rounded"
+                  className="absolute inset-0 object-cover w-[90%] h-full mx-auto rounded"
                   src="https://images.pexels.com/photos/2381069/pexels-photo-2381069.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
                   alt="Person"
                 />
               </div>
-              <div className="flex flex-col sm:text-center">
+              <div className="flex flex-col text-center">
                 <p className="text-lg font-bold text-white">Akriti</p>
                 <p className="mb-5 text-xs text-green-300">Design Team Lead</p>
                 <div className="flex items-center space-x-3 sm:justify-center"></div>
@@ -191,12 +191,12 @@ const AboutComponent = () => {
             <div>
             <div className="relative pb-56 mb-4  overflow-hidden rounded shadow lg:pb-64">
               <img
-                className="absolute object-cover w-[90%] h-full rounded"
+                className="absolute inset-0 object-cover w-[90%] h-full mx-auto rounded"
                 src="https://images.pexels.com/photos/3747435/pexels-photo-3747435.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
                 alt="Person"
               />
             </div>
-            <div className="flex flex-col sm:text-center">
+            <div className="flex flex-col text-center">
               <p className="text-lg font-bold text-white">Anjali</p>
               <p className="mb-5 text-xs text-green-300">Human Resources</p>
               <div className="flex items-center space-x-3 sm:justify-center"></div>
@@ -206,12 +206,12 @@ const AboutComponent = () => {
           <div>
             <div className="relative pb-56 mb-4 overflow-hidden rounded shadow lg:pb-64">
               <img
-                className="absolute object-cover w-[90%] h-full rounded"
+                className="absolute inset-0 object-cover w-[90%] h-full mx-auto rounded"
                 src="https://images.pexels.com/photos/3931603/pexels-photo-3931603.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
                 alt="Person"
               />
             </div>
-            <div className="flex flex-col sm:text-center">
+            <div className="flex flex-col text-center">
               <p className="text-lg font-bold text-white">Mayank</p>
               <p className="mb-5 text-xs text-green-300">Good guy</p>
               <div className="flex items-center space-x-3 sm:justify-center"></div>
@@ -221,12 +221,12 @@ const AboutComponent = () => {
           <div>
               <div className="relative pb-56 mb-4  overflow-hidden rounded shadow lg:pb-64">
                 <img
-                  className="absolute object-cover w-[90%] h-full rounded"
+                  className="absolute inset-0 object-cover w-[90%] h-full mx-auto rounded"
                   src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=3&amp;h=750&amp;w=1260"
                   alt="Person"
                 />
               </div>
-              <div className="flex flex-col sm:text-center">
+              <div className="flex flex-col text-center">
                 <p className="text-lg font-bold text-white">Mehul</p>
                 <p className="mb-5 text-xs text-green-300">Product Manager</p>
                 <div className="flex items-center space-x-3 sm:justify-center"></div>
@@ -236,12 +236,12 @@ const AboutComponent = () => {
             <div>
               <div className="relative pb-56 mb-4 overflow-hidden rounded shadow lg:pb-64">
                 <img
-                  className="absolute object-cover w-[90%] h-full rounded"
+                  className="absolute inset-0 object-cover w-[90%] h-full mx-auto rounded"
                   src="https://images.pexels.com/photos/2381069/pexels-photo-2381069.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
                   alt="Person"
                 />
               </div>
-              <div className="flex flex-col sm:text-center">
+              <div className="flex flex-col text-center">
                 <p className="text-lg font-bold text-white">Akriti</p>
                 <p className="mb-5 text-xs text-green-300">Design Team Lead</p>
                 <div className="flex items-center space-x-3 sm:justify-center"></div>
@@ -251,12 +251,12 @@ const AboutComponent = () => {
             <div>
             <div className="relative pb-56 mb-4 overflow-hidden rounded shadow lg:pb-64">
               <img
-                className="absolute object-cover w-[90%] h-full rounded"
+                className="absolute inset-0 object-cover w-[90%] h-full mx-auto rounded"
                 src="https://images.pexels.com/photos/3747435/pexels-photo-3747435.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
                 alt="Person"
               />
             </div>
-            <div className="flex flex-col sm:text-center">
+            <div className="flex flex-col text-center">
               <p className="text-lg font-bold text-white">Anjali</p>
               <p className="mb-5 text-xs text-green-300">Human Resources</p>
               <div className="flex items-center space-x-3 sm:justify-center"></div>
@@ -266,12 +266,12 @@ const AboutComponent = () => {
           <div>
             <div className="relative pb-56 mb-4 overflow-hidden rounded shadow lg:pb-64">
               <img
-                className="absolute object-cover w-[90%] h-full rounded"
+                className="absolute inset-0 object-cover w-[90%] h-full mx-auto rounded"
                 src="https://images.pexels.com/photos/3931603/pexels-photo-3931603.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
                 alt="Person"
               />
             </div>
-            <div className="flex flex-col sm:text-center">
+            <div className="flex flex-col text-center">
               <p className="text-lg font-bold text-white">Mayank</p>
               <p className="mb-5 text-xs text-green-300">Good guy</p>
               <div className="flex items-center space-x-3 sm:justify-center"></div>
@@ -290,7 +290,7 @@ const AboutComponent = () => {
           <p className="text-base text-white md:text-xl">Our Latest News</p>
         </div>
         <Carousel responsive={responsive} itemClass="carousel-item-padding-40-px" >
-        <div class="block rounded-lg w-[90%] bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
+        <div class="block inset-0 mx-auto rounded-lg w-[90%] bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
             <div
               class="relative overflow-hidden bg-cover bg-no-repeat"
               data-te-ripple-init
@@ -324,7 +324,7 @@ const AboutComponent = () => {
             </div>
           </div>
 
-          <div class="block rounded-lg w-[90%] bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
+          <div class="block rounded-lg w-[90%] inset-0 mx-auto bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
             <div
               class="relative overflow-hidden bg-cover bg-no-repeat"
               data-te-ripple-init
@@ -358,7 +358,7 @@ const AboutComponent = () => {
             </div>
           </div>
 
-          <div class="block rounded-lg w-[90%] bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
+          <div class="block rounded-lg w-[90%] inset-0 mx-auto bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
             <div
               class="relative overflow-hidden bg-cover bg-no-repeat"
               data-te-ripple-init
@@ -392,7 +392,7 @@ const AboutComponent = () => {
             </div>
           </div>
 
-          <div class="block rounded-lg w-[90%] bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
+          <div class="block rounded-lg w-[90%] inset-0 mx-auto bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
             <div
               class="relative overflow-hidden bg-cover bg-no-repeat"
               data-te-ripple-init
@@ -426,7 +426,7 @@ const AboutComponent = () => {
             </div>
           </div>
 
-          <div class="block rounded-lg w-[90%] bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
+          <div class="block rounded-lg w-[90%] inset-0 mx-auto bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
             <div
               class="relative overflow-hidden bg-cover bg-no-repeat"
               data-te-ripple-init
@@ -460,7 +460,7 @@ const AboutComponent = () => {
             </div>
           </div>
 
-          <div class="block rounded-lg w-[90%] bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
+          <div class="block rounded-lg w-[90%] inset-0 mx-auto bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
             <div
               class="relative overflow-hidden bg-cover bg-no-repeat"
               data-te-ripple-init
@@ -494,7 +494,7 @@ const AboutComponent = () => {
             </div>
           </div>
 
-          <div class="block rounded-lg w-[90%] bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
+          <div class="block rounded-lg w-[90%] inset-0 mx-auto bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
             <div
               class="relative overflow-hidden bg-cover bg-no-repeat"
               data-te-ripple-init
@@ -528,7 +528,7 @@ const AboutComponent = () => {
             </div>
           </div>
 
-          <div class="block rounded-lg w-[90%] bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
+          <div class="block rounded-lg w-[90%] inset-0 mx-auto bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
             <div
               class="relative overflow-hidden bg-cover bg-no-repeat"
               data-te-ripple-init
@@ -571,7 +571,7 @@ const AboutComponent = () => {
         <h2 className="mb-4 text-3xl text-green-300 sm:text-4xl dark:text-green-300 overflow-hidden font-Sansation">SIGN UP FOR OUR NEWSLETTERS</h2>
         <p className="mx-auto mb-8 max-w-2xl font-Sansation text-gray-500 md:mb-12 sm:text-xl dark:text-white">GET NOTIFIED OF THE BEST OF OUR UPDATES</p>
         <form action="#">
-          <div className="items-center mx-auto mb-3 space-y-4 max-w-screen-md sm:flex sm:space-y-0 gap-5">
+          <div className="items-center mx-auto mb-5 space-y-4 max-w-screen-md sm:flex sm:space-y-0 gap-5">
             <div className="relative w-[80%]">
               <label htmlFor="name" className="hidden mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Name</label>
               <div className="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">

@@ -224,14 +224,19 @@ line-height: 20px;
       height: auto; /* Adjust height as needed */
     }
 
+    .heading-1{
+        height: 108px;
+    }
 
     .heading-1 h1 {
         font-size: 24px;
+        margin: 8px;
       }
     
       .heading-1 p {
         font-size: 16px;
-        margin-bottom: 10px;
+        /* margin-bottom: 10px; */
+        margin: 12px;
       }
     .contact-form-right {
       width: 100%; /* Full width for the right section */

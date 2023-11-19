@@ -58,6 +58,7 @@
     border-radius: 25px;
     border: 2px solid white;
     width: 90%;
+    margin: 0px auto;
 }
 .card{
     width: 320px;
