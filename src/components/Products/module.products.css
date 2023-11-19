@@ -240,7 +240,7 @@ tr {
 
 }
 .popup-card .close-btn{
-  color: #e2e2e2;
+  color: #1d1c1c;
   z-index: 6;
   position: absolute;
   right: 0;
@@ -348,6 +348,7 @@ tr {
     }
   
     .contact-btn {
+      color: #FFF;
       width: 100px;
       height: 30px;
       margin: 10px 30px;
