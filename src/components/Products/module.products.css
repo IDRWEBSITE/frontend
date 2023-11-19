@@ -297,6 +297,9 @@ tr {
     margin: 5px;
     font-size: 13px;
   }
+  .popup-card .close-btn{
+    color: rgb(225, 222, 222);
+  }
 }
 /* Styles for screens with a maximum width of 768px (e.g., mobile phones) */
 @media (max-width: 768px) {
