@@ -351,7 +351,7 @@ tr {
     }
   
     .contact-btn {
-      color: #FFF;
+      /* color: #FFF; */
       width: 100px;
       height: 30px;
       margin: 10px 30px;
