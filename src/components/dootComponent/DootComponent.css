@@ -1,0 +1,26 @@
+.doot-container--{
+margin-top: -100px;
+}
+.doot-heading-text{
+    color: var(--Color, #FFF);
+text-align: left;
+font-family: Urbanist;
+font-size: 63.162px;
+font-style: normal;
+font-weight: 700;
+
+}
+.doot-text{
+    
+    color: var(--Color, #FFF);
+font-family: Urbanist;
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: 22px;
+}
+@media screen and (max-width:768px) {
+    .doot-heading-text{
+        font-size: 50px;
+    }
+}

@@ -153,8 +153,8 @@ h1 {
   bottom: 30%;
   position: absolute;
   left: 10%;
-  height: 250px;
-  width: 250px;
+ height: 300px;
+ width: 300px;
 
 }
 .top-right-feature-drone{
@@ -163,8 +163,8 @@ h1 {
   bottom: 30%;
   position: absolute;
   right: 10%;
-  height: 250px;
-  width: 250px;
+  height: 300px;
+  width: 300px;
 
 }
 @media screen and (max-width:768px) {
@@ -189,13 +189,17 @@ h1 {
     width: 350px;
   }
   .top-left-feature-drone{
-    top: 60%;
-    left: 25%;
-    height: 220px;
-    width: 220px;
+    top: 48%;
+    left: 14%;
+    
+    width: 300px;
   }
   .top-right-feature-drone{
     height: 200px;
     top: 60%;
+    
+  }
+  .top-right-feature-drone{
+    /* left: -20%; */
   }
 }

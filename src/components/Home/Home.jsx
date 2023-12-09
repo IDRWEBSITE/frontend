@@ -19,6 +19,11 @@ import droneProduct from "../../assets/drone-product-banner.png";
 import bgDrone from "../../assets/bg-drone.jpeg";
 import Testimonials from "../testimonials/testimonials";
 import { Parallax, ParallaxBanner } from "react-scroll-parallax";
+import DootComponent1 from "../dootComponent/DootComponent1";
+import DootComponent2 from "../dootComponent/DootComponent2";
+import DootComponent3 from "../dootComponent/DootComponent3";
+import DootComponent4 from "../dootComponent/DootComponent4";
+
 const Home = () => {
   const ref = useRef(null);
   const isInView = useInView(ref);
@@ -513,20 +518,12 @@ const Home = () => {
                       <>
                         {counter == 2 && (
                           <div className="top-left-feature-drone">
-                            <img
-                              src={text1}
-                              alt=""
-                              style={{ height: "450px" }}
-                            />
+                            <DootComponent1 />
                           </div>
                         )}
                         {counter == 3 && (
                           <div className="top-left-feature-drone">
-                            <img
-                              src={text3}
-                              alt=""
-                              style={{ height: "450px" }}
-                            />
+                            <DootComponent2 />
                           </div>
                         )}
                         <div
@@ -544,20 +541,12 @@ const Home = () => {
                         </div>
                         {counter == 4 && (
                           <div className="top-right-feature-drone">
-                            <img
-                              src={text2}
-                              alt=""
-                              style={{ height: "450px" }}
-                            />
+                            <DootComponent3 />
                           </div>
                         )}
                         {counter == 5 && (
                           <div className="top-right-feature-drone">
-                            <img
-                              src={text4}
-                              alt=""
-                              style={{ height: "450px" }}
-                            />
+                            <DootComponent4 />
                           </div>
                         )}
                       </>
@@ -565,20 +554,12 @@ const Home = () => {
                       <>
                         {counter == 2 && (
                           <div className="top-left-feature-drone">
-                            <img
-                              src={text1}
-                              alt=""
-                              style={{ height: "450px" }}
-                            />
+                            <DootComponent1 />
                           </div>
                         )}
                         {counter == 3 && (
                           <div className="top-left-feature-drone">
-                            <img
-                              src={text3}
-                              alt=""
-                              style={{ height: "450px" }}
-                            />
+                            <DootComponent3 />
                           </div>
                         )}
                         <div
@@ -596,20 +577,12 @@ const Home = () => {
                         </div>
                         {counter == 2 && (
                           <div className="top-right-feature-drone">
-                            <img
-                              src={text2}
-                              alt=""
-                              style={{ height: "450px" }}
-                            />
+                            <DootComponent2 />
                           </div>
                         )}
                         {counter == 3 && (
                           <div className="top-right-feature-drone">
-                            <img
-                              src={text4}
-                              alt=""
-                              style={{ height: "450px" }}
-                            />
+                            <DootComponent4 />
                           </div>
                         )}
                       </>
