@@ -4,7 +4,7 @@ import bgDrone from "../../assets/bg-drone.jpeg";
 
 export default function BrownBg() {
   return (
-    <div>
+    <div style={{ position: "relative" }}>
       <Plx
         parallaxData={[
           {
@@ -21,15 +21,13 @@ export default function BrownBg() {
           },
         ]}
         style={{
-          top: "0",
           position: "fixed",
-          width: "100%",
-          zIndex: 100,
+          top: "200px",
         }}
       >
-        <img style={{ width: "100%" }} src={bgDrone} alt="foreground" />
+        <img style={{ height: "100vh" }} src={bgDrone} alt="foreground" />
       </Plx>
-      <Plx
+      {/* <Plx
         parallaxData={[
           {
             start: 0,
@@ -80,7 +78,7 @@ export default function BrownBg() {
           src="/goonies.png"
           alt="Goonies"
         />
-      </Plx>
+      </Plx> */}
     </div>
   );
 }
