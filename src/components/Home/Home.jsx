@@ -28,28 +28,53 @@ const Home = () => {
   const ref = useRef(null);
   const isInView = useInView(ref);
   const [counter, setCounter] = useState(0);
+  const [elements, setElements] = useState(0);
   const array = [{}];
   const isMobile = window.innerWidth <= 600;
   console.log(isMobile);
   const increase = () => {
     if (isMobile) {
-      if (counter < 5) {
+      if (counter < 2) {
         setCounter(counter + 1);
+        console.log(counter);
+        if (counter === 1) {
+          window.scrollBy(0, window.innerHeight);
+          setCounter(0);
+        }
       }
     } else {
       if (counter < 3) {
         setCounter(counter + 1);
+
+        if (counter === 1) {
+          window.scrollBy(0, window.innerHeight);
+          setCounter(0);
+        }
       }
     }
-
-    console.log(counter);
   };
   const decrease = () => {
     if (counter > 0) {
       setCounter(counter - 1);
     }
-    console.log(counter);
   };
+  const decreaseElements = () => {
+    if (elements > 0) {
+      setElements(elements - 1);
+    }
+  };
+  const increaseElements = () => {
+    if (isMobile) {
+      if (elements < 3) {
+        setElements(elements + 1);
+      }
+    } else {
+      if (elements < 1) {
+        setElements(elements + 1);
+      }
+    }
+  };
+  console.log("counter", counter);
   return (
     <div>
       <ParallaxBanner
@@ -600,7 +625,7 @@ const Home = () => {
         style={{ backgroundImage: `url(${bgDrone})` }}
       >
         {/* --------- section 1-------------- */}
-        <div ref={ref} className="container-key-features">
+        <div className="container-key-features" ref={ref}>
           {/* Content for section 1 */}
           <span>
             <IoIosArrowBack
@@ -745,7 +770,7 @@ const Home = () => {
                         </div>
                       </>
                     )}
-                    {counter === 1 && (
+                    {counter >= 1 && (
                       <div
                         ref={ref}
                         className="top-left-feature absolute inset-0 flex  items-center justify-center urbanist"
@@ -774,7 +799,7 @@ const Home = () => {
                         </p>
                       </div>
                     )}
-                    {counter === 1 && (
+                    {counter >= 1 && (
                       <div
                         className="bottom-right-feature absolute inset-0 flex  items-end justify-center urbanist "
                         style={{
@@ -788,8 +813,6 @@ const Home = () => {
                         }}
                         ref={ref}
                       >
-                        <p className="top-right-feature-detail">New Camera</p>
-
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="299"
@@ -798,10 +821,11 @@ const Home = () => {
                           fill="none"
                         >
                           <path
-                            d="M5.66669 75C5.66669 73.5272 4.47278 72.3333 3 72.3333C1.52725 72.3333 0.333344 73.5272 0.333344 75C0.333344 76.4728 1.52725 77.6667 3 77.6667C4.47278 77.6667 5.66669 76.4728 5.66669 75ZM97.1818 1V0.5H97.0089L96.8729 0.606842L97.1818 1ZM3.30893 75.3932L97.4907 1.39316L96.8729 0.606842L2.6911 74.6068L3.30893 75.3932ZM97.1818 1.5H299V0.5H97.1818V1.5Z"
+                            d="M5.66669 2C5.66669 3.4728 4.47278 4.6667 3 4.6667C1.52725 4.6667 0.333344 3.4728 0.333344 2C0.333344 0.5272 1.52725 -0.6667 3 -0.6667C4.47278 -0.6667 5.66669 0.5272 5.66669 2ZM97.1818 76V76.5H97.0089L96.8729 76.3932L97.1818 76ZM3.30893 2.6068L97.4907 76.6068L96.8729 77.3932L2.6911 3.3932L3.30893 2.6068ZM97.1818 76.5H299V77.5H97.1818V76.5Z"
                             fill="white"
                           />
                         </svg>
+                        <p className="top-right-feature-detail">New Camera</p>
                       </div>
                     )}
                   </>
@@ -813,8 +837,36 @@ const Home = () => {
         </div>
 
         {/* ------------ section 2----------- */}
-        <div ref={ref} className="container-diff">
-          {/* Content for section 2 */}
+        <div className="container-diff">
+          <span>
+            <IoIosArrowBack
+              style={{
+                zIndex: "200",
+                position: "absolute",
+                top: "40%",
+                left: "1%",
+                fontSize: "40px",
+                color: "white",
+                cursor: "pointer",
+              }}
+              onClick={decreaseElements}
+            />
+          </span>
+
+          <span>
+            <IoIosArrowForward
+              style={{
+                top: "40%",
+                right: "1%",
+                zIndex: "200",
+                position: "absolute",
+                fontSize: "40px",
+                color: "white",
+                cursor: "pointer",
+              }}
+              onClick={increaseElements}
+            />
+          </span>
           <ParallaxBanner
             style={{ height: "100vh" }}
             layers={[
@@ -873,12 +925,12 @@ const Home = () => {
                   <>
                     {isMobile ? (
                       <>
-                        {counter == 2 && (
+                        {elements == 0 && (
                           <div className="top-left-feature-drone">
                             <DootComponent1 />
                           </div>
                         )}
-                        {counter == 3 && (
+                        {elements == 1 && (
                           <div className="top-left-feature-drone">
                             <DootComponent2 />
                           </div>
@@ -896,12 +948,12 @@ const Home = () => {
                             }}
                           />
                         </div>
-                        {counter == 4 && (
+                        {elements == 2 && (
                           <div className="top-right-feature-drone">
                             <DootComponent3 />
                           </div>
                         )}
-                        {counter == 5 && (
+                        {elements == 3 && (
                           <div className="top-right-feature-drone">
                             <DootComponent4 />
                           </div>
@@ -909,12 +961,12 @@ const Home = () => {
                       </>
                     ) : (
                       <>
-                        {counter == 2 && (
+                        {elements == 0 && (
                           <div className="top-left-feature-drone">
                             <DootComponent1 />
                           </div>
                         )}
-                        {counter == 3 && (
+                        {elements == 1 && (
                           <div className="top-left-feature-drone">
                             <DootComponent3 />
                           </div>
@@ -932,12 +984,12 @@ const Home = () => {
                             }}
                           />
                         </div>
-                        {counter == 2 && (
+                        {elements == 0 && (
                           <div className="top-right-feature-drone">
                             <DootComponent2 />
                           </div>
                         )}
-                        {counter == 3 && (
+                        {elements == 1 && (
                           <div className="top-right-feature-drone">
                             <DootComponent4 />
                           </div>

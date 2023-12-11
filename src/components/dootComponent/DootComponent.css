@@ -5,7 +5,7 @@ margin-top: -100px;
     color: var(--Color, #FFF);
 text-align: left;
 font-family: Urbanist;
-font-size: 63.162px;
+font-size: 40px;
 font-style: normal;
 font-weight: 700;
 
@@ -21,6 +21,9 @@ line-height: 22px;
 }
 @media screen and (max-width:768px) {
     .doot-heading-text{
-        font-size: 50px;
+        font-size: 40px;
+    }
+    .doot-text{
+        font-size: 15px;
     }
 }
