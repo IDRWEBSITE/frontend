@@ -28,28 +28,53 @@ const Home = () => {
   const ref = useRef(null);
   const isInView = useInView(ref);
   const [counter, setCounter] = useState(0);
+  const [elements, setElements] = useState(0);
   const array = [{}];
   const isMobile = window.innerWidth <= 600;
   console.log(isMobile);
   const increase = () => {
     if (isMobile) {
-      if (counter < 5) {
+      if (counter < 2) {
         setCounter(counter + 1);
+        console.log(counter);
+        if (counter === 1) {
+          window.scrollBy(0, window.innerHeight);
+          setCounter(0);
+        }
       }
     } else {
       if (counter < 3) {
         setCounter(counter + 1);
+
+        if (counter === 1) {
+          window.scrollBy(0, window.innerHeight);
+          setCounter(0);
+        }
       }
     }
-
-    console.log(counter);
   };
   const decrease = () => {
     if (counter > 0) {
       setCounter(counter - 1);
     }
-    console.log(counter);
   };
+  const decreaseElements = () => {
+    if (elements > 0) {
+      setElements(elements - 1);
+    }
+  };
+  const increaseElements = () => {
+    if (isMobile) {
+      if (elements < 3) {
+        setElements(elements + 1);
+      }
+    } else {
+      if (elements < 1) {
+        setElements(elements + 1);
+      }
+    }
+  };
+  console.log("counter", counter);
   return (
     <div>
       <ParallaxBanner
@@ -246,7 +271,7 @@ const Home = () => {
         ]}
         className="aspect-[2/1] bg-black"
       />
-      <div ref={ref} style={{ position: "relative" }}>
+      {/* <div ref={ref} style={{ position: "relative" }}>
         <span>
           <IoIosArrowBack
             style={{
@@ -594,7 +619,429 @@ const Home = () => {
             className="aspect-[2/1.2] "
           />
         )}
+      </div> */}
+      <div
+        className="main-container"
+        style={{ backgroundImage: `url(${bgDrone})` }}
+      >
+        {/* --------- section 1-------------- */}
+        <div className="container-key-features" ref={ref}>
+          {/* Content for section 1 */}
+          <span>
+            <IoIosArrowBack
+              style={{
+                zIndex: "200",
+                position: "absolute",
+                top: "50%",
+                left: "20px",
+                fontSize: "40px",
+                color: "white",
+                cursor: "pointer",
+              }}
+              onClick={decrease}
+            />
+          </span>
+
+          <span>
+            <IoIosArrowForward
+              style={{
+                top: "50%",
+                right: "20px",
+                zIndex: "200",
+                position: "absolute",
+                fontSize: "40px",
+                color: "white",
+                cursor: "pointer",
+              }}
+              onClick={increase}
+            />
+          </span>
+          <ParallaxBanner
+            style={{ height: "100vh" }}
+            layers={[
+              {
+                // image: bgDrone,
+
+                shouldAlwaysCompleteAnimation: true,
+                expanded: false,
+                children: (
+                  <div ref={ref} className="heading-5">
+                    <h1
+                      style={{
+                        transform: isInView ? "none" : "translateY(-400px)",
+                        opacity: isInView ? 1 : 0,
+                        transition:
+                          "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 1s",
+                      }}
+                      id="keyFeatures"
+                    >
+                      <span className="inner-title"> Key Features</span>
+                      <br />
+                      <span className="main-title">Doot Mk-1</span>
+                    </h1>
+                  </div>
+                ),
+              },
+
+              {
+                speed: -10,
+                opacity: [2, 0],
+                children: (
+                  <>
+                    <div
+                      ref={ref}
+                      className="absolute inset-0 flex items-center justify-center urbanist"
+                    >
+                      <img
+                        src={drone1}
+                        alt=""
+                        style={{
+                          marginTop: "100px",
+
+                          opacity: isInView ? 1 : 0,
+
+                          transition:
+                            "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 2s",
+                        }}
+                      />
+                    </div>
+
+                    {counter == 0 && (
+                      <>
+                        {" "}
+                        <div
+                          className="top-right-feature absolute inset-0 flex  items-end justify-center urbanist "
+                          style={{
+                            flexDirection: "column",
+                            marginBottom: "200px",
+                            transform: isInView ? "none" : "translateX(1000px)",
+                            opacity: isInView ? 1 : 0,
+
+                            transition:
+                              "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 3s",
+                          }}
+                          ref={ref}
+                        >
+                          <p className="top-right-feature-detail">
+                            Maximum Speed :- 50 KM/H{" "}
+                          </p>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="299"
+                            height="78"
+                            viewBox="0 0 299 78"
+                            fill="none"
+                          >
+                            <path
+                              d="M5.66669 75C5.66669 73.5272 4.47278 72.3333 3 72.3333C1.52725 72.3333 0.333344 73.5272 0.333344 75C0.333344 76.4728 1.52725 77.6667 3 77.6667C4.47278 77.6667 5.66669 76.4728 5.66669 75ZM97.1818 1V0.5H97.0089L96.8729 0.606842L97.1818 1ZM3.30893 75.3932L97.4907 1.39316L96.8729 0.606842L2.6911 74.6068L3.30893 75.3932ZM97.1818 1.5H299V0.5H97.1818V1.5Z"
+                              fill="white"
+                            />
+                          </svg>
+                        </div>
+                        <div
+                          ref={ref}
+                          className="bottom-left-feature"
+                          style={{
+                            transform: isInView
+                              ? "none"
+                              : "translateX(-1000px)",
+                            opacity: isInView ? 1 : 0,
+
+                            transition:
+                              "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 3s",
+                          }}
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="299"
+                            height="78"
+                            viewBox="0 0 299 78"
+                            fill="none"
+                          >
+                            <path
+                              d="M293.333 3C293.333 4.47276 294.527 5.66667 296 5.66667C297.473 5.66667 298.667 4.47276 298.667 3C298.667 1.52724 297.473 0.333333 296 0.333333C294.527 0.333333 293.333 1.52724 293.333 3ZM201.818 77V77.5H201.991L202.127 77.3932L201.818 77ZM295.691 2.60684L201.509 76.6068L202.127 77.3932L296.309 3.39316L295.691 2.60684ZM201.818 76.5H0V77.5H201.818V76.5Z"
+                              fill="white"
+                            />
+                          </svg>
+                          <p className="bottom-left-feature-detail">
+                            {" "}
+                            30 Minutes flight time{" "}
+                          </p>
+                        </div>
+                      </>
+                    )}
+                    {counter >= 1 && (
+                      <motion.div
+                        initial={{ x: -1000 }} // Initial position of the element (off-screen)
+                        animate={isInView ? { x: 0 } : { x: -1000 }} // Animate based on isInView
+                        transition={{ type: "easeIn" }} // Animation type and settings
+                        ref={ref}
+                        className="top-left-feature absolute inset-0 flex items-center justify-center urbanist"
+                        style={{
+                          opacity: isInView ? 1 : 0,
+                          transition:
+                            "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s",
+                        }}
+                      >
+                        <svg
+                          width="299"
+                          height="78"
+                          viewBox="0 0 299 78"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M293.333 75C293.333 73.5272 294.527 72.3333 296 72.3333C297.473 72.3333 298.667 73.5272 298.667 75C298.667 76.4728 297.473 77.6667 296 77.6667C294.527 77.6667 293.333 76.4728 293.333 75ZM201.818 1V0.5H201.991L202.127 0.606842L201.818 1ZM295.691 75.3932L201.509 1.39316L202.127 0.606842L296.309 74.6068L295.691 75.3932ZM201.818 1.5H0V0.5H201.818V1.5Z"
+                            fill="white"
+                          />
+                        </svg>
+                        <p className="top-left-feature-detail">
+                          High Resolution Camera
+                        </p>
+                      </motion.div>
+                    )}
+
+                    {counter >= 1 && (
+                      <motion.div
+                        initial={{ x: 1000 }} // Initial position of the element (off-screen)
+                        animate={isInView ? { x: 0 } : { x: 1000 }} // Animate based on isInView
+                        transition={{ type: "spring", stiffness: 120 }} // Animation type and settings
+                        className="bottom-right-feature absolute inset-0 flex items-end justify-center urbanist"
+                        style={{
+                          flexDirection: "column",
+                          marginBottom: "200px",
+                          opacity: isInView ? 1 : 0,
+                          transition:
+                            "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s",
+                        }}
+                        ref={ref}
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="299"
+                          height="78"
+                          viewBox="0 0 299 78"
+                          fill="none"
+                        >
+                          <path
+                            d="M5.66669 2C5.66669 3.4728 4.47278 4.6667 3 4.6667C1.52725 4.6667 0.333344 3.4728 0.333344 2C0.333344 0.5272 1.52725 -0.6667 3 -0.6667C4.47278 -0.6667 5.66669 0.5272 5.66669 2ZM97.1818 76V76.5H97.0089L96.8729 76.3932L97.1818 76ZM3.30893 2.6068L97.4907 76.6068L96.8729 77.3932L2.6911 3.3932L3.30893 2.6068ZM97.1818 76.5H299V77.5H97.1818V76.5Z"
+                            fill="white"
+                          />
+                        </svg>
+                        <p className="top-right-feature-detail">New Camera</p>
+                      </motion.div>
+                    )}
+                  </>
+                ),
+              },
+            ]}
+            className="aspect-[2/1.2] "
+          />
+        </div>
+
+        {/* ------------ section 2----------- */}
+        <div className="container-diff">
+          <span>
+            <IoIosArrowBack
+              style={{
+                zIndex: "200",
+                position: "absolute",
+                top: "40%",
+                left: "1%",
+                fontSize: "40px",
+                color: "white",
+                cursor: "pointer",
+              }}
+              onClick={decreaseElements}
+            />
+          </span>
+
+          <span>
+            <IoIosArrowForward
+              style={{
+                top: "40%",
+                right: "1%",
+                zIndex: "200",
+                position: "absolute",
+                fontSize: "40px",
+                color: "white",
+                cursor: "pointer",
+              }}
+              onClick={increaseElements}
+            />
+          </span>
+          <ParallaxBanner
+            style={{ height: "100vh" }}
+            layers={[
+              {
+                // image: bgDrone,
+
+                shouldAlwaysCompleteAnimation: true,
+                expanded: false,
+                children: (
+                  <div ref={ref} className="heading-5">
+                    <h1
+                      style={{
+                        transform: isInView ? "none" : "translateY(-400px)",
+                        opacity: isInView ? 1 : 0,
+                        transition:
+                          "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 1s",
+                      }}
+                      id="keyFeatures"
+                    >
+                      {isMobile ? (
+                        <>
+                          <span
+                            className="inner-title"
+                            style={{ lineHeight: "20px" }}
+                          >
+                            What makes
+                          </span>
+                          <br />
+                          <span
+                            className="main-title"
+                            style={{ fontSize: "30px" }}
+                          >
+                            Doot Mk-1
+                          </span>
+                          <br />
+                          <span className="inner-title">Different?</span>
+                        </>
+                      ) : (
+                        <>
+                          <span className="inner-title">What makes</span>
+                          <br />
+                          <span className="main-title">Doot Mk-1</span>
+
+                          <span className="inner-title">Different?</span>
+                        </>
+                      )}
+                    </h1>
+                  </div>
+                ),
+              },
+
+              {
+                speed: -10,
+                opacity: [2, 0],
+                children: (
+                  <>
+                    {isMobile ? (
+                      <>
+                        {elements == 0 && (
+                          <motion.div
+                            initial={{ opacity: 0, x: -100 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.5 }}
+                            className="top-left-feature-drone"
+                          >
+                            <DootComponent1 />
+                          </motion.div>
+                        )}
+                        {elements == 1 && (
+                          <motion.div
+                            initial={{ opacity: 0, x: -100 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.5 }}
+                            className="top-left-feature-drone"
+                          >
+                            <DootComponent2 />
+                          </motion.div>
+                        )}
+                        <div
+                          ref={ref}
+                          className="absolute inset-0 flex items-center justify-center urbanist"
+                        >
+                          <img
+                            src={drone3}
+                            className="drone-3"
+                            alt=""
+                            style={{
+                              marginTop: "100px",
+                            }}
+                          />
+                        </div>
+                        {elements == 2 && (
+                          <motion.div 
+                          initial={{ opacity: 0, x: 100 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{ duration: 0.5, delay: 0.5  }}
+                          className="top-right-feature-drone">
+                            <DootComponent3 />
+                          </motion.div>
+                        )}
+                        {elements == 3 && (
+                          <motion.div 
+                          initial={{ opacity: 0, x: 100 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{ duration: 0.5, delay: 0.5  }}
+                          className="top-right-feature-drone">
+                            <DootComponent4 />
+                          </motion.div>
+                        )}
+                      </>
+                    ) : (
+                      <>
+                        {elements == 0 && (
+                          <motion.div 
+                          initial={{ opacity: 0, x: -1000 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{ duration: 0.9, delay: 0.5  }}
+                          className="top-left-feature-drone">
+                            <DootComponent1 />
+                          </motion.div>
+                        )}
+                        {elements == 1 && (
+                          <motion.div 
+                          initial={{ opacity: 0, x: -1000 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{ duration: 0.9, delay: 0.5  }}
+                          className="top-left-feature-drone">
+                            <DootComponent3 />
+                          </motion.div>
+                        )}
+                        <div
+                          ref={ref}
+                          className="absolute inset-0 flex items-center justify-center urbanist"
+                        >
+                          <img
+                            src={drone3}
+                            className="drone-3"
+                            alt=""
+                            style={{
+                              marginTop: "100px",
+                            }}
+                          />
+                        </div>
+                        {elements == 0 && (
+                          <motion.div 
+                          initial={{ opacity: 0, x: 1000 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{ duration: 0.9, delay: 0.5  }}
+                          className="top-right-feature-drone">
+                            <DootComponent2 />
+                          </motion.div>
+                        )}
+                        {elements == 1 && (
+                          <motion.div 
+                          initial={{ opacity: 0, x: 1000 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{ duration: 0.9 , delay: 0.5 }}
+                          className="top-right-feature-drone">
+                            <DootComponent4 />
+                          </motion.div>
+                        )}
+                      </>
+                    )}
+                  </>
+                ),
+              },
+            ]}
+            className="aspect-[2/1.2] "
+          />
+        </div>
       </div>
+
       {/* ----------testimonials------------ */}
       <motion.div>
         <Testimonials />
