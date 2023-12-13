@@ -771,15 +771,16 @@ const Home = () => {
                       </>
                     )}
                     {counter >= 1 && (
-                      <div
+                      <motion.div
+                        initial={{ x: -1000 }} // Initial position of the element (off-screen)
+                        animate={isInView ? { x: 0 } : { x: -1000 }} // Animate based on isInView
+                        transition={{ type: "easeIn" }} // Animation type and settings
                         ref={ref}
-                        className="top-left-feature absolute inset-0 flex  items-center justify-center urbanist"
+                        className="top-left-feature absolute inset-0 flex items-center justify-center urbanist"
                         style={{
-                          transform: isInView ? "none" : "translateX(-1000px)",
                           opacity: isInView ? 1 : 0,
-
                           transition:
-                            "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 3s",
+                            "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s",
                         }}
                       >
                         <svg
@@ -797,19 +798,21 @@ const Home = () => {
                         <p className="top-left-feature-detail">
                           High Resolution Camera
                         </p>
-                      </div>
+                      </motion.div>
                     )}
+
                     {counter >= 1 && (
-                      <div
-                        className="bottom-right-feature absolute inset-0 flex  items-end justify-center urbanist "
+                      <motion.div
+                        initial={{ x: 1000 }} // Initial position of the element (off-screen)
+                        animate={isInView ? { x: 0 } : { x: 1000 }} // Animate based on isInView
+                        transition={{ type: "spring", stiffness: 120 }} // Animation type and settings
+                        className="bottom-right-feature absolute inset-0 flex items-end justify-center urbanist"
                         style={{
                           flexDirection: "column",
                           marginBottom: "200px",
-                          transform: isInView ? "none" : "translateX(1000px)",
                           opacity: isInView ? 1 : 0,
-
                           transition:
-                            "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 3s",
+                            "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s",
                         }}
                         ref={ref}
                       >
@@ -826,7 +829,7 @@ const Home = () => {
                           />
                         </svg>
                         <p className="top-right-feature-detail">New Camera</p>
-                      </div>
+                      </motion.div>
                     )}
                   </>
                 ),
@@ -926,14 +929,24 @@ const Home = () => {
                     {isMobile ? (
                       <>
                         {elements == 0 && (
-                          <div className="top-left-feature-drone">
+                          <motion.div
+                            initial={{ opacity: 0, x: -100 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.5 }}
+                            className="top-left-feature-drone"
+                          >
                             <DootComponent1 />
-                          </div>
+                          </motion.div>
                         )}
                         {elements == 1 && (
-                          <div className="top-left-feature-drone">
+                          <motion.div
+                            initial={{ opacity: 0, x: -100 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.5 }}
+                            className="top-left-feature-drone"
+                          >
                             <DootComponent2 />
-                          </div>
+                          </motion.div>
                         )}
                         <div
                           ref={ref}
@@ -949,27 +962,43 @@ const Home = () => {
                           />
                         </div>
                         {elements == 2 && (
-                          <div className="top-right-feature-drone">
+                          <motion.div 
+                          initial={{ opacity: 0, x: 100 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{ duration: 0.5, delay: 0.5  }}
+                          className="top-right-feature-drone">
                             <DootComponent3 />
-                          </div>
+                          </motion.div>
                         )}
                         {elements == 3 && (
-                          <div className="top-right-feature-drone">
+                          <motion.div 
+                          initial={{ opacity: 0, x: 100 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{ duration: 0.5, delay: 0.5  }}
+                          className="top-right-feature-drone">
                             <DootComponent4 />
-                          </div>
+                          </motion.div>
                         )}
                       </>
                     ) : (
                       <>
                         {elements == 0 && (
-                          <div className="top-left-feature-drone">
+                          <motion.div 
+                          initial={{ opacity: 0, x: -1000 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{ duration: 0.9, delay: 0.5  }}
+                          className="top-left-feature-drone">
                             <DootComponent1 />
-                          </div>
+                          </motion.div>
                         )}
                         {elements == 1 && (
-                          <div className="top-left-feature-drone">
+                          <motion.div 
+                          initial={{ opacity: 0, x: -1000 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{ duration: 0.9, delay: 0.5  }}
+                          className="top-left-feature-drone">
                             <DootComponent3 />
-                          </div>
+                          </motion.div>
                         )}
                         <div
                           ref={ref}
@@ -985,14 +1014,22 @@ const Home = () => {
                           />
                         </div>
                         {elements == 0 && (
-                          <div className="top-right-feature-drone">
+                          <motion.div 
+                          initial={{ opacity: 0, x: 1000 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{ duration: 0.9, delay: 0.5  }}
+                          className="top-right-feature-drone">
                             <DootComponent2 />
-                          </div>
+                          </motion.div>
                         )}
                         {elements == 1 && (
-                          <div className="top-right-feature-drone">
+                          <motion.div 
+                          initial={{ opacity: 0, x: 1000 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{ duration: 0.9 , delay: 0.5 }}
+                          className="top-right-feature-drone">
                             <DootComponent4 />
-                          </div>
+                          </motion.div>
                         )}
                       </>
                     )}
